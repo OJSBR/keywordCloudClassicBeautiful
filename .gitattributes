@@ -3,3 +3,5 @@
 /.gitignore         export-ignore
 /.gitattributes     export-ignore
 error_log           export-ignore
+/snapshot.png       export-ignore
+/snapshot.svg       export-ignore
