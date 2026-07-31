@@ -13,6 +13,8 @@ keywords stand out), which was lost in later versions, and renders it **entirely
 bundled library — no external CDN**, so it can never break from a remote library change.
 
 > **Developed and maintained by [OJSBR](https://ojsbr.com).** This plugin builds on the work
+
+![Keyword cloud preview — keywords sized, coloured and packed by how often they are used](snapshot.png)
 > of others — please see the [Credits & acknowledgements](#credits--acknowledgements) section.
 
 ## Compatibility & branches
