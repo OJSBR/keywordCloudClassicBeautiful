@@ -22,6 +22,7 @@ use APP\facades\Repo;
 use APP\notification\NotificationManager;
 use APP\submission\Submission;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\DB;
 use PKP\context\Context;
 use PKP\controlledVocab\ControlledVocab;
 use PKP\core\JSONMessage;
@@ -174,27 +175,37 @@ class KeywordCloudClassicBeautifulBlockPlugin extends BlockPlugin
             ->getQueryBuilder()
             ->whereIn('p.status', [Submission::STATUS_PUBLISHED])
             ->select('p.publication_id')
-            ->pluck('p.publication_id');
+            ->pluck('p.publication_id')
+            ->all();
 
-        $keywords = [];
-        foreach ($publicationIds as $publicationId) {
-            $publicationKeywords = Repo::controlledVocab()->getBySymbolic(
-                ControlledVocab::CONTROLLED_VOCAB_SUBMISSION_KEYWORD,
-                Application::ASSOC_TYPE_PUBLICATION,
-                $publicationId,
-                [$locale]
-            );
-            foreach (($publicationKeywords[$locale] ?? []) as $keyword) {
-                $keyword = trim($keyword);
-                if ($keyword !== '') {
-                    $keywords[] = $keyword;
-                }
-            }
+        if (!$publicationIds) {
+            return [];
         }
 
+        // One query for every keyword of every published publication, instead of a
+        // per-publication call. That call was both an N+1 and — because
+        // getBySymbolic() defaults to $asEntryData = true on OJS 3.5 — returned
+        // arrays of entry metadata (['name' => ...]) rather than plain strings.
+        $values = DB::table('controlled_vocabs as cv')
+            ->join('controlled_vocab_entries as cve', 'cve.controlled_vocab_id', '=', 'cv.controlled_vocab_id')
+            ->join('controlled_vocab_entry_settings as cves', 'cves.controlled_vocab_entry_id', '=', 'cve.controlled_vocab_entry_id')
+            ->where('cv.symbolic', ControlledVocab::CONTROLLED_VOCAB_SUBMISSION_KEYWORD)
+            ->where('cv.assoc_type', Application::ASSOC_TYPE_PUBLICATION)
+            ->whereIn('cv.assoc_id', $publicationIds)
+            ->where('cves.setting_name', 'name')
+            ->where('cves.locale', $locale)
+            ->pluck('cves.setting_value');
+
+        // Count case-insensitively but keep the most common display form. Each row
+        // is one (publication, keyword) pair, so the count is the number of
+        // published publications that use the keyword.
         $counts = [];
         $display = [];
-        foreach ($keywords as $keyword) {
+        foreach ($values as $value) {
+            $keyword = trim((string) $value);
+            if ($keyword === '') {
+                continue;
+            }
             $key = mb_strtolower($keyword);
             $counts[$key] = ($counts[$key] ?? 0) + 1;
             $display[$key][$keyword] = ($display[$key][$keyword] ?? 0) + 1;
