@@ -24,7 +24,6 @@ use APP\submission\Submission;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
 use PKP\context\Context;
-use PKP\controlledVocab\ControlledVocab;
 use PKP\core\JSONMessage;
 use PKP\core\PKPApplication;
 use PKP\facades\Locale;
@@ -182,17 +181,16 @@ class KeywordCloudClassicBeautifulBlockPlugin extends BlockPlugin
             return [];
         }
 
-        // One query for every keyword of every published publication, instead of a
-        // per-publication call. That call was both an N+1 and — because
-        // getBySymbolic() defaults to $asEntryData = true on OJS 3.5 — returned
-        // arrays of entry metadata (['name' => ...]) rather than plain strings.
+        // One query for every keyword of every published publication (avoids an
+        // N+1). On OJS 3.4 the submission-keyword text is stored in
+        // controlled_vocab_entry_settings under setting_name = 'submissionKeyword'.
         $values = DB::table('controlled_vocabs as cv')
             ->join('controlled_vocab_entries as cve', 'cve.controlled_vocab_id', '=', 'cv.controlled_vocab_id')
             ->join('controlled_vocab_entry_settings as cves', 'cves.controlled_vocab_entry_id', '=', 'cve.controlled_vocab_entry_id')
-            ->where('cv.symbolic', ControlledVocab::CONTROLLED_VOCAB_SUBMISSION_KEYWORD)
+            ->where('cv.symbolic', 'submissionKeyword')
             ->where('cv.assoc_type', Application::ASSOC_TYPE_PUBLICATION)
             ->whereIn('cv.assoc_id', $publicationIds)
-            ->where('cves.setting_name', 'name')
+            ->where('cves.setting_name', 'submissionKeyword')
             ->where('cves.locale', $locale)
             ->pluck('cves.setting_value');
 
