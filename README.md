@@ -12,10 +12,15 @@ across the journal's published articles. It restores the **classic behaviour** (
 keywords stand out), which was lost in later versions, and renders it **entirely from a
 bundled library — no external CDN**, so it can never break from a remote library change.
 
-> **Developed and maintained by [OJSBR](https://ojsbr.com).** This plugin builds on the work
+> **Based on the original `keywordCloud` block plugin** — part of the **Public Knowledge
+> Project (PKP)**, © **Simon Fraser University** and © **John Willinsky**, and maintained in
+> recent years by **[Lepidus Tecnologia](https://lepidus.com.br)** — and on the
+> **[wordcloud2.js](https://github.com/timdream/wordcloud2.js)** layout engine by **Tim
+> Guan-tin Chien and contributors** (MIT). Reimplemented for OJS 3.4/3.5 and maintained by
+> **[OJSBR](https://ojsbr.com)** — full details in the
+> [Credits & acknowledgements](#credits--acknowledgements) section.
 
 ![Keyword cloud preview — keywords sized, coloured and packed by how often they are used](snapshot.png)
-> of others — please see the [Credits & acknowledgements](#credits--acknowledgements) section.
 
 ## Compatibility & branches
 
@@ -117,8 +122,13 @@ frequência de uso** nos artigos publicados da revista. Ele **restaura o comport
 de uma **biblioteca embarcada — sem CDN externo**, então nunca quebra por causa de uma biblioteca
 remota.
 
-> **Desenvolvido e mantido pela [OJSBR](https://ojsbr.com).** Este plugin se apoia no trabalho de
-> outras pessoas — veja a seção [Créditos e agradecimentos](#créditos-e-agradecimentos).
+> **Baseado no plugin de bloco `keywordCloud` original** — parte do **Public Knowledge
+> Project (PKP)**, © **Simon Fraser University** e © **John Willinsky**, mantido nos últimos
+> anos pela **[Lepidus Tecnologia](https://lepidus.com.br)** — e no motor de layout
+> **[wordcloud2.js](https://github.com/timdream/wordcloud2.js)** de **Tim Guan-tin Chien e
+> colaboradores** (MIT). Reimplementado para o OJS 3.4/3.5 e mantido pela
+> **[OJSBR](https://ojsbr.com)** — detalhes completos na seção
+> [Créditos e agradecimentos](#créditos-e-agradecimentos).
 
 ### Compatibilidade e branches
 
