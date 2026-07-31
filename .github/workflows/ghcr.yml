@@ -1,0 +1,87 @@
+name: Publish package to GitHub Packages (GHCR)
+
+# On every push to a stable-3_x_0 branch, package the plugin as a .tar.gz and
+# publish it to the GitHub Container Registry (ghcr.io), so it shows up under the
+# organization's "Packages" tab — mirroring the GitHub Releases artifact.
+#
+# Tags per OJS/OMP line:
+#   <line>.build.<run>  immutable build (e.g. 3.5.build.42)
+#   <line>.latest       rolling pointer to the newest build (e.g. 3.5.latest)
+#
+# Install with ORAS:
+#   oras pull ghcr.io/ojsbr/<plugin>:<line>.latest
+#   tar -xzf <plugin>-*.tar.gz -C /path/to/ojs-or-omp/plugins/generic/
+
+on:
+  push:
+    branches:
+      - 'stable-3_*_*'
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  ghcr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Read plugin metadata
+        id: meta
+        run: |
+          BRANCH="${GITHUB_REF_NAME}"
+          if [[ ! "$BRANCH" =~ ^stable-([0-9]+)_([0-9]+)_[0-9]+$ ]]; then
+            echo "Branch ${BRANCH} is not a supported stable branch." >&2
+            exit 1
+          fi
+          LINE="${BASH_REMATCH[1]}.${BASH_REMATCH[2]}"
+          APP=$(grep -oP '(?<=<application>)[^<]+' version.xml | head -1)
+          REL=$(grep -oP '(?<=<release>)[^<]+' version.xml | head -1)
+          OWNER_LC=$(echo "${{ github.repository_owner }}" | tr '[:upper:]' '[:lower:]')
+          REPO_LC=$(echo "${{ github.event.repository.name }}" | tr '[:upper:]' '[:lower:]')
+          echo "line=${LINE}" >> "$GITHUB_OUTPUT"
+          echo "app=${APP}" >> "$GITHUB_OUTPUT"
+          echo "rel=${REL}" >> "$GITHUB_OUTPUT"
+          echo "owner_lc=${OWNER_LC}" >> "$GITHUB_OUTPUT"
+          echo "repo_lc=${REPO_LC}" >> "$GITHUB_OUTPUT"
+
+      - name: Build tarball
+        run: |
+          APP="${{ steps.meta.outputs.app }}"
+          LINE="${{ steps.meta.outputs.line }}"
+          ARCHIVE="${APP}-${LINE}.build.${GITHUB_RUN_NUMBER}.tar.gz"
+          git archive --format=tar.gz --prefix="${APP}/" -o "${ARCHIVE}" HEAD
+          echo "ARCHIVE=${ARCHIVE}" >> "$GITHUB_ENV"
+
+      - name: Setup ORAS
+        uses: oras-project/setup-oras@v1
+        with:
+          version: 1.2.2
+
+      - name: Publish to GHCR
+        env:
+          IMAGE: ghcr.io/${{ steps.meta.outputs.owner_lc }}/${{ steps.meta.outputs.repo_lc }}
+          REPO_URL: https://github.com/${{ github.repository }}
+        run: |
+          echo "${{ secrets.GITHUB_TOKEN }}" | oras login ghcr.io \
+            --username "${{ github.repository_owner }}" --password-stdin
+          for TAG in "${{ steps.meta.outputs.line }}.build.${GITHUB_RUN_NUMBER}" "${{ steps.meta.outputs.line }}.latest"; do
+            oras push "${IMAGE}:${TAG}" \
+              --artifact-type application/vnd.ojsbr.plugin+tar.gz \
+              --annotation "org.opencontainers.image.source=${REPO_URL}" \
+              --annotation "org.opencontainers.image.version=${TAG}" \
+              --annotation "org.opencontainers.image.description=OJSBR plugin ${{ steps.meta.outputs.app }} ${{ steps.meta.outputs.rel }} for PKP ${{ steps.meta.outputs.line }}.x" \
+              "${ARCHIVE}:application/vnd.ojsbr.plugin+tar.gz"
+          done
+
+      - name: Make the package public
+        if: ${{ vars.ENABLE_PUBLIC_GHCR_PACKAGE == 'true' }}
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.OJSBR_PACKAGES_ADMIN_TOKEN }}
+        run: |
+          gh api --method PUT \
+            "/orgs/${{ github.repository_owner }}/packages/container/${{ steps.meta.outputs.repo_lc }}/visibility" \
+            -f visibility=public

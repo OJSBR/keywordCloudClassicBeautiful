@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE version SYSTEM "../../../lib/pkp/dtd/pluginVersion.dtd">
+
+<!--
+  * version.xml
+  *
+  * Copyright (c) 2026 OJSBR (https://ojsbr.com)
+  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
+  *
+  * Plugin version information.
+  -->
+<version>
+	<application>keywordCloudClassicBeautiful</application>
+	<type>plugins.blocks</type>
+	<release>1.0.0.0</release>
+	<date>2026-07-31</date>
+	<lazy-load>1</lazy-load>
+	<class>KeywordCloudClassicBeautifulBlockPlugin</class>
+</version>

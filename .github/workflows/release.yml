@@ -1,0 +1,35 @@
+name: Package plugin
+
+# When a tag is pushed (e.g. `git tag 1.2.0.0 && git push --tags`, or when a
+# GitHub Release is created), build the installable plugin package and attach it
+# to the matching Release automatically.
+#
+# The tarball unpacks as `<plugin>/…` (the repository name), so it can be
+# installed straight through OJS/OMP "Upload A New Plugin".
+
+on:
+  push:
+    tags:
+      - '*'
+
+permissions:
+  contents: write
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build installable tarball
+        run: |
+          NAME="${{ github.event.repository.name }}"
+          TAG="${{ github.ref_name }}"
+          git archive --format=tar.gz --prefix="$NAME/" -o "$NAME-$TAG.tar.gz" HEAD
+          ls -l "$NAME-$TAG.tar.gz"
+
+      - name: Attach package to the Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: ${{ github.event.repository.name }}-${{ github.ref_name }}.tar.gz
