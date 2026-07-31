@@ -15,8 +15,9 @@ PKP community can use and improve it.
 | Branch | Target |
 |--------|--------|
 | `stable-3_5_0` *(default)* | OJS 3.5.x |
+| `stable-3_4_0` | OJS 3.4.x |
 
-Base your work on — and open your pull request against — the `stable-3_5_0` branch.
+Base your work on — and open your pull request against — the branch that matches the OJS version you target (`stable-3_5_0` or `stable-3_4_0`).
 
 ## Pull requests
 
@@ -53,8 +54,8 @@ comunidade PKP possa usar e evoluir.
 
 ### Modelo de branches
 
-A branch `stable-3_5_0` (padrão) mira o OJS 3.5.x. Baseie seu trabalho — e abra o pull
-request — nessa branch.
+A branch `stable-3_5_0` (padrão) mira o OJS 3.5.x e a `stable-3_4_0` mira o OJS 3.4.x. Baseie
+seu trabalho — e abra o pull request — na branch da versão que você está mirando.
 
 ### Pull requests
 
