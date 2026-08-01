@@ -30,8 +30,12 @@
 
 {if $kwcItems}
 	<style>
-		.block_keyword_cloud_classic .ojsbrKwc { position: relative; }
-		.block_keyword_cloud_classic .ojsbrKwc__canvas { display: none; width: 100%; height: auto; }
+		/* The block must never be able to force its container open. A <canvas> has
+		   an intrinsic size, so without these caps it can pin a flex or grid column
+		   and starve its siblings — the theme has no way to defend against it. */
+		.block_keyword_cloud_classic { max-width: 100%; min-width: 0; }
+		.block_keyword_cloud_classic .ojsbrKwc { position: relative; max-width: 100%; min-width: 0; }
+		.block_keyword_cloud_classic .ojsbrKwc__canvas { display: none; width: 100%; max-width: 100%; height: auto; }
 		.block_keyword_cloud_classic .ojsbrKwc--rendered .ojsbrKwc__canvas { display: block; margin: 0 auto; }
 		.block_keyword_cloud_classic .ojsbrKwc__list {
 			list-style: none; margin: 0; padding: 0.3em 0;
@@ -143,8 +147,21 @@
 					var fontFamily = box.getAttribute('data-font') || 'Georgia, "Times New Roman", serif';
 
 					function draw() {
-						var w = box.clientWidth || box.parentNode.clientWidth || 250;
-						if (!w) { return; }
+						// Collapse the no-JS fallback list BEFORE measuring. That list is a
+						// wide flex-wrap of keyword links, so measuring while it is still
+						// expanded returns ITS width rather than the column's. That figure
+						// was written to the canvas width attribute — and a canvas carries an
+						// intrinsic size, so it then pinned the container open. In a flex
+						// sidebar this starved the neighbouring text column down to zero
+						// width and pushed the page into horizontal overflow.
+						box.classList.add('ojsbrKwc--rendered');
+						var w = box.clientWidth || (box.parentNode ? box.parentNode.clientWidth : 0);
+						if (!w) {
+							// Nothing measurable yet: restore the readable fallback and bail.
+							box.classList.remove('ojsbrKwc--rendered');
+							return;
+						}
+						w = Math.max(160, w);
 						var h = heightPx > 0 ? heightPx : Math.max(200, Math.round(w * heightRatio));
 						canvas.width = w;
 						canvas.height = h;
@@ -190,7 +207,9 @@
 					var t;
 					window.addEventListener('resize', function () {
 						clearTimeout(t);
-						t = setTimeout(function () { box.classList.remove('ojsbrKwc--rendered'); draw(); }, 250);
+						// Do NOT drop --rendered here: that re-expands the fallback list and
+						// draw() would measure it again instead of the column.
+						t = setTimeout(draw, 250);
 					});
 				})(boxes[b]);
 			}
