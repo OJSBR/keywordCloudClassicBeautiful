@@ -30,8 +30,12 @@
 
 {if $kwcItems}
 	<style>
-		.block_keyword_cloud_classic .ojsbrKwc { position: relative; }
-		.block_keyword_cloud_classic .ojsbrKwc__canvas { display: none; width: 100%; height: auto; }
+		/* The block must never be able to force its container open. A <canvas> has
+		   an intrinsic size, so without these caps it can pin a flex or grid column
+		   and starve its siblings — the theme has no way to defend against it. */
+		.block_keyword_cloud_classic { max-width: 100%; min-width: 0; }
+		.block_keyword_cloud_classic .ojsbrKwc { position: relative; max-width: 100%; min-width: 0; }
+		.block_keyword_cloud_classic .ojsbrKwc__canvas { display: none; width: 100%; max-width: 100%; height: auto; }
 		.block_keyword_cloud_classic .ojsbrKwc--rendered .ojsbrKwc__canvas { display: block; margin: 0 auto; }
 		.block_keyword_cloud_classic .ojsbrKwc__list {
 			list-style: none; margin: 0; padding: 0.3em 0;
@@ -95,6 +99,7 @@
 					// Hover highlight overlay: the hovered keyword pops out, enlarged
 					// and straightened, and is clickable (the canvas words are just
 					// pixels, so this gives them a real hover/click affordance).
+					var HL_POP = 1.22; // same pop for every keyword, applied to its real drawn size
 					var hl = box.querySelector('.ojsbrKwc__hl');
 					var hideTimer;
 					function hideHl() { hideTimer = setTimeout(function () { hl.classList.remove('is-visible'); hl.style.opacity = '0'; }, 60); }
@@ -108,7 +113,8 @@
 						hl.style.top = cy + 'px';
 						hl.style.color = colorMap[word] || '#777';
 						hl.style.fontFamily = family;
-						hl.style.fontWeight = fontPx > 24 ? '700' : '600';
+						// Same weight rule as the canvas, so the overlay does not look heavier.
+						hl.style.fontWeight = fontPx > 30 ? '700' : (fontPx > 18 ? '600' : '400');
 						hl.style.fontSize = Math.round(fontPx) + 'px';
 						hl.setAttribute('data-url', urlMap[word] || '');
 						// Start exactly as the word is drawn, then a gentle pop in place.
@@ -117,7 +123,7 @@
 						hl.style.opacity = '0';
 						void hl.offsetWidth;
 						hl.style.transition = '';
-						hl.style.transform = base + 'scale(1.06)';
+						hl.style.transform = base + 'scale(' + HL_POP + ')';
 						hl.style.opacity = '1';
 						hl.classList.add('is-visible');
 					}
@@ -143,14 +149,31 @@
 					var fontFamily = box.getAttribute('data-font') || 'Georgia, "Times New Roman", serif';
 
 					function draw() {
-						var w = box.clientWidth || box.parentNode.clientWidth || 250;
-						if (!w) { return; }
+						// Collapse the no-JS fallback list BEFORE measuring. That list is a
+						// wide flex-wrap of keyword links, so measuring while it is still
+						// expanded returns ITS width rather than the column's. That figure
+						// was written to the canvas width attribute — and a canvas carries an
+						// intrinsic size, so it then pinned the container open. In a flex
+						// sidebar this starved the neighbouring text column down to zero
+						// width and pushed the page into horizontal overflow.
+						box.classList.add('ojsbrKwc--rendered');
+						var w = box.clientWidth || (box.parentNode ? box.parentNode.clientWidth : 0);
+						if (!w) {
+							// Nothing measurable yet: restore the readable fallback and bail.
+							box.classList.remove('ojsbrKwc--rendered');
+							return;
+						}
+						w = Math.max(160, w);
 						var h = heightPx > 0 ? heightPx : Math.max(200, Math.round(w * heightRatio));
 						canvas.width = w;
 						canvas.height = h;
 						var scale = w / 260;
 						WordCloud(canvas, {
-							list: list,
+							// A fresh copy every draw: shrinkToFit rewrites the weight of
+							// whatever did not fit (weight * 3/4) IN the array it is given,
+							// so reusing it made the cloud shrink a little more on every
+							// redraw and never grow back when the sidebar widened again.
+							list: list.map(function (pair) { return [pair[0], pair[1]]; }),
 							gridSize: Math.max(3, Math.round(w / 52)),
 							weightFactor: function (s) { return s * scale; },
 							fontFamily: fontFamily,
@@ -174,7 +197,11 @@
 										item[0],
 										dimension.x + dimension.w / 2,
 										dimension.y + dimension.h / 2,
-										(sizeMap[item[0]] || 16) * scale,
+										// The size the word was DRAWN with, not the configured
+										// one: shrinkToFit shrinks whatever did not fit, and
+										// using the configured size made those keywords pop
+										// far more than the others.
+										dimension.fontSize || (sizeMap[item[0]] || 16) * scale,
 										fontFamily,
 										dimension.rotate
 									);
@@ -190,7 +217,9 @@
 					var t;
 					window.addEventListener('resize', function () {
 						clearTimeout(t);
-						t = setTimeout(function () { box.classList.remove('ojsbrKwc--rendered'); draw(); }, 250);
+						// Do NOT drop --rendered here: that re-expands the fallback list and
+						// draw() would measure it again instead of the column.
+						t = setTimeout(draw, 250);
 					});
 				})(boxes[b]);
 			}

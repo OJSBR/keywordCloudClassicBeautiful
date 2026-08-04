@@ -34,7 +34,7 @@ class SettingsForm extends Form
 
     private const DEFAULTS = [
         'numKeywords' => 40, 'minFont' => 12, 'maxFont' => 48,
-        'size' => 'medium', 'heightPx' => 0, 'rotation' => 'diagonal', 'palette' => 'soft',
+        'size' => 'large', 'heightPx' => 0, 'rotation' => 'diagonal', 'palette' => 'soft',
         'font' => 'serif', 'sampleWhenEmpty' => 1,
     ];
 

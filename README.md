@@ -1,10 +1,10 @@
 # Keyword Cloud (Classic · Beautiful) — OJS plugin
 
 [![OJS](https://img.shields.io/badge/OJS-3.4%20%7C%203.5-brightgreen)](https://pkp.sfu.ca/ojs/)
-[![Version](https://img.shields.io/badge/version-1.0.0.1-blue)](version.xml)
+[![Version](https://img.shields.io/badge/version-1.0.2.0--ojs3.4-blue)](version.xml)
 [![License](https://img.shields.io/badge/license-GPL--3.0-lightgrey)](LICENSE)
 
-**⬇️ Install package:** [OJS 3.5](https://github.com/OJSBR/keywordCloudClassicBeautiful/releases/download/1.0.0.1/keywordCloudClassicBeautiful-1.0.0.1.tar.gz) · [OJS 3.4](https://github.com/OJSBR/keywordCloudClassicBeautiful/releases/download/1.0.0.1-ojs3.4/keywordCloudClassicBeautiful-1.0.0.1-ojs3.4.tar.gz) — or browse all [Releases](../../releases).
+**⬇️ Install package:** [OJS 3.5](https://github.com/OJSBR/keywordCloudClassicBeautiful/releases/download/1.0.2.0/keywordCloudClassicBeautiful-1.0.2.0.tar.gz) · [OJS 3.4](https://github.com/OJSBR/keywordCloudClassicBeautiful/releases/download/1.0.2.0-ojs3.4/keywordCloudClassicBeautiful-1.0.2.0-ojs3.4.tar.gz) — or browse all [Releases](../../releases).
 
 A **block plugin** for **Open Journal Systems (OJS)** that renders a **real, packed keyword
 cloud** in the sidebar — where each keyword is **sized and coloured by how often it is used**
@@ -20,14 +20,16 @@ bundled library — no external CDN**, so it can never break from a remote libra
 > **[OJSBR](https://ojsbr.com)** — full details in the
 > [Credits & acknowledgements](#credits--acknowledgements) section.
 
-![Keyword cloud preview — keywords sized, coloured and packed by how often they are used](snapshot.png)
+![Keyword cloud in a live journal: keywords sized, coloured and packed by how often they are used, each one lifting off the canvas as the pointer reaches it](snapshot.gif)
+
+<sub>Recorded on [Revista Interface Tecnológica](https://revista.fatectq.edu.br/interfacetecnologica) (FATEC Taquaritinga), with its real keywords.</sub>
 
 ## Compatibility & branches
 
 | OJS version | Branch | Plugin release |
 |-------------|--------|----------------|
-| OJS 3.5.x   | [`stable-3_5_0`](../../tree/stable-3_5_0) *(default)* | 1.0.0.1 |
-| OJS 3.4.x   | [`stable-3_4_0`](../../tree/stable-3_4_0) | 1.0.0.1-ojs3.4 |
+| OJS 3.5.x   | [`stable-3_5_0`](../../tree/stable-3_5_0) *(default)* | 1.0.2.0 |
+| OJS 3.4.x   | [`stable-3_4_0`](../../tree/stable-3_4_0) | 1.0.2.0-ojs3.4 |
 
 ## What it does
 
@@ -134,8 +136,8 @@ remota.
 
 | Versão do OJS | Branch | Release |
 |---------------|--------|---------|
-| OJS 3.5.x     | [`stable-3_5_0`](../../tree/stable-3_5_0) *(padrão)* | 1.0.0.1 |
-| OJS 3.4.x     | [`stable-3_4_0`](../../tree/stable-3_4_0) | 1.0.0.1-ojs3.4 |
+| OJS 3.5.x     | [`stable-3_5_0`](../../tree/stable-3_5_0) *(padrão)* | 1.0.2.0 |
+| OJS 3.4.x     | [`stable-3_4_0`](../../tree/stable-3_4_0) | 1.0.2.0-ojs3.4 |
 
 ### O que faz
 

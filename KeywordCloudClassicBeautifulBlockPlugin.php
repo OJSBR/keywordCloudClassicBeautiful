@@ -47,7 +47,7 @@ class KeywordCloudClassicBeautifulBlockPlugin extends BlockPlugin
         'numKeywords' => 40,
         'minFont' => 12,
         'maxFont' => 48,
-        'size' => 'medium',        // small | medium | large (width-proportional height)
+        'size' => 'large',         // small | medium | large (width-proportional height)
         'heightPx' => 0,           // explicit block height in px; 0 = automatic
         'rotation' => 'diagonal',  // horizontal | orthogonal | diagonal
         'palette' => 'soft',       // soft | vibrant | mono
@@ -140,7 +140,7 @@ class KeywordCloudClassicBeautifulBlockPlugin extends BlockPlugin
             'kwcItems' => $items,
             'kwcIsSample' => $this->lastWasSample,
             'kwcRotation' => $this->setting($contextId, 'rotation'),
-            'kwcHeightRatio' => $sizeRatios[$size] ?? 0.92,
+            'kwcHeightRatio' => $sizeRatios[$size] ?? $sizeRatios[self::DEFAULTS['size']],
             'kwcHeightPx' => max(0, (int) $this->setting($contextId, 'heightPx')),
             'kwcFontStack' => $fontStacks[$font] ?? $fontStacks['serif'],
         ]);
