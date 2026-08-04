@@ -170,10 +170,10 @@
 						var scale = w / 260;
 						WordCloud(canvas, {
 							// A fresh copy every draw: shrinkToFit rewrites the weight of
-								// whatever did not fit (weight * 3/4) IN the array it is given,
-								// so reusing it made the cloud shrink a little more on every
-								// redraw and never grow back when the sidebar widened again.
-								list: list.map(function (pair) { return [pair[0], pair[1]]; }),
+							// whatever did not fit (weight * 3/4) IN the array it is given,
+							// so reusing it made the cloud shrink a little more on every
+							// redraw and never grow back when the sidebar widened again.
+							list: list.map(function (pair) { return [pair[0], pair[1]]; }),
 							gridSize: Math.max(3, Math.round(w / 52)),
 							weightFactor: function (s) { return s * scale; },
 							fontFamily: fontFamily,
