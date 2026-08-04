@@ -895,7 +895,11 @@ if (!window.clearImmediate) {
           y: (gy + bounds[0]) * g,
           w: (bounds[1] - bounds[3] + 1) * g,
           h: (bounds[2] - bounds[0] + 1) * g,
-          rotate: info.rotateDeg /* OJSBR patch: per-word rotation (radians) */
+          rotate: info.rotateDeg, /* OJSBR patch: per-word rotation (radians) */
+          /* OJSBR patch: font size the word was actually drawn with. shrinkToFit
+             may have reduced it (weight * 3/4, repeatedly), so this is the only
+             reliable figure for anything that has to line up with the glyph. */
+          fontSize: info.fontSize
         }
       }
 

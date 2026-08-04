@@ -99,6 +99,7 @@
 					// Hover highlight overlay: the hovered keyword pops out, enlarged
 					// and straightened, and is clickable (the canvas words are just
 					// pixels, so this gives them a real hover/click affordance).
+					var HL_POP = 1.22; // same pop for every keyword, applied to its real drawn size
 					var hl = box.querySelector('.ojsbrKwc__hl');
 					var hideTimer;
 					function hideHl() { hideTimer = setTimeout(function () { hl.classList.remove('is-visible'); hl.style.opacity = '0'; }, 60); }
@@ -112,7 +113,8 @@
 						hl.style.top = cy + 'px';
 						hl.style.color = colorMap[word] || '#777';
 						hl.style.fontFamily = family;
-						hl.style.fontWeight = fontPx > 24 ? '700' : '600';
+						// Same weight rule as the canvas, so the overlay does not look heavier.
+						hl.style.fontWeight = fontPx > 30 ? '700' : (fontPx > 18 ? '600' : '400');
 						hl.style.fontSize = Math.round(fontPx) + 'px';
 						hl.setAttribute('data-url', urlMap[word] || '');
 						// Start exactly as the word is drawn, then a gentle pop in place.
@@ -121,7 +123,7 @@
 						hl.style.opacity = '0';
 						void hl.offsetWidth;
 						hl.style.transition = '';
-						hl.style.transform = base + 'scale(1.06)';
+						hl.style.transform = base + 'scale(' + HL_POP + ')';
 						hl.style.opacity = '1';
 						hl.classList.add('is-visible');
 					}
@@ -167,7 +169,11 @@
 						canvas.height = h;
 						var scale = w / 260;
 						WordCloud(canvas, {
-							list: list,
+							// A fresh copy every draw: shrinkToFit rewrites the weight of
+								// whatever did not fit (weight * 3/4) IN the array it is given,
+								// so reusing it made the cloud shrink a little more on every
+								// redraw and never grow back when the sidebar widened again.
+								list: list.map(function (pair) { return [pair[0], pair[1]]; }),
 							gridSize: Math.max(3, Math.round(w / 52)),
 							weightFactor: function (s) { return s * scale; },
 							fontFamily: fontFamily,
@@ -191,7 +197,11 @@
 										item[0],
 										dimension.x + dimension.w / 2,
 										dimension.y + dimension.h / 2,
-										(sizeMap[item[0]] || 16) * scale,
+										// The size the word was DRAWN with, not the configured
+										// one: shrinkToFit shrinks whatever did not fit, and
+										// using the configured size made those keywords pop
+										// far more than the others.
+										dimension.fontSize || (sizeMap[item[0]] || 16) * scale,
 										fontFamily,
 										dimension.rotate
 									);
