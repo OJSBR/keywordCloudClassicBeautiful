@@ -1,0 +1,125 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: ar\n"
+
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.displayName"
+msgstr "سحابة الكلمات المفتاحية (كلاسيكية) — OJSBR"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.description"
+msgstr "سحابة في الشريط الجانبي للكلمات المفتاحية لمقالات المجلة، بحجم ولون يتبعان تكرار كل كلمة — السلوك الكلاسيكي، مُولَّد بالكامل على الخادم دون أي مكتبة JavaScript خارجية. من إنتاج OJSBR."
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.title"
+msgstr "الكلمات المفتاحية"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.uses"
+msgstr "مقالة/مقالات"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.sampleNote"
+msgstr "عيّنة توضيحية — لا توجد بعدُ كلمات مفتاحية منشورة في هذه المجلة."
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.description"
+msgstr "اضبط شكل سحابة الكلمات المفتاحية وعدد الكلمات التي تعرضها."
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.appearance"
+msgstr "المظهر"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.content"
+msgstr "المحتوى"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.size"
+msgstr "حجم المربّع"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.size.small"
+msgstr "صغير"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.size.medium"
+msgstr "متوسط"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.size.large"
+msgstr "كبير"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.rotation"
+msgstr "الدوران"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.rotation.horizontal"
+msgstr "أفقي فقط"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.rotation.orthogonal"
+msgstr "أفقي وعمودي"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.rotation.diagonal"
+msgstr "متنوّع (مع أقطار)"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.palette"
+msgstr "لوحة الألوان"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.palette.soft"
+msgstr "هادئ"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.palette.vibrant"
+msgstr "زاهٍ"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.palette.mono"
+msgstr "أحادي اللون (أزرق)"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.font"
+msgstr "الخط"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.font.serif"
+msgstr "بزخارف (Serif)"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.font.sans"
+msgstr "بلا زخارف (Sans-serif)"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.font.rounded"
+msgstr "مستدير"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.numKeywords"
+msgstr "عدد الكلمات المفتاحية"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.minFont"
+msgstr "أصغر حجم خط (بكسل)"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.maxFont"
+msgstr "أكبر حجم خط (بكسل)"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.sampleWhenEmpty"
+msgstr "عرض سحابة عيّنة عندما لا تكون للمجلة كلمات مفتاحية بعد"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.heightPx"
+msgstr "ارتفاع المربّع بالبكسل (0 = تلقائي)"

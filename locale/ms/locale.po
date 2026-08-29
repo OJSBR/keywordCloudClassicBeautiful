@@ -1,0 +1,125 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: ms\n"
+
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.displayName"
+msgstr "Awan kata kunci (klasik) — OJSBR"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.description"
+msgstr "Awan pada bar sisi bagi kata kunci artikel jurnal, bersaiz dan berwarna mengikut kekerapan penggunaan setiap kata — kelakuan klasik, dibina sepenuhnya di pelayan tanpa pustaka JavaScript luaran. Oleh OJSBR."
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.title"
+msgstr "Kata kunci"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.uses"
+msgstr "artikel"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.sampleNote"
+msgstr "Contoh ilustrasi — jurnal ini belum mempunyai kata kunci yang diterbitkan."
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.description"
+msgstr "Konfigurasikan rupa awan kata kunci dan bilangan kata kunci yang dipaparkan."
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.appearance"
+msgstr "Rupa"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.content"
+msgstr "Kandungan"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.size"
+msgstr "Saiz blok"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.size.small"
+msgstr "Kecil"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.size.medium"
+msgstr "Sederhana"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.size.large"
+msgstr "Besar"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.rotation"
+msgstr "Putaran"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.rotation.horizontal"
+msgstr "Mendatar sahaja"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.rotation.orthogonal"
+msgstr "Mendatar dan menegak"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.rotation.diagonal"
+msgstr "Pelbagai (dengan pepenjuru)"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.palette"
+msgstr "Palet warna"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.palette.soft"
+msgstr "Lembut"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.palette.vibrant"
+msgstr "Terang"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.palette.mono"
+msgstr "Monokrom (biru)"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.font"
+msgstr "Fon"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.font.serif"
+msgstr "Serif"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.font.sans"
+msgstr "Sans-serif"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.font.rounded"
+msgstr "Bulat"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.numKeywords"
+msgstr "Bilangan kata kunci"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.minFont"
+msgstr "Saiz fon terkecil (px)"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.maxFont"
+msgstr "Saiz fon terbesar (px)"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.sampleWhenEmpty"
+msgstr "Papar awan contoh apabila jurnal belum mempunyai kata kunci"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.heightPx"
+msgstr "Tinggi blok dalam px (0 = automatik)"

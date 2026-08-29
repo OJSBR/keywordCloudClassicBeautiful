@@ -1,0 +1,125 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: zh_Hans\n"
+
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.displayName"
+msgstr "关键词云（经典）— OJSBR"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.description"
+msgstr "侧边栏中的期刊文章关键词云，字号和颜色随使用频率变化——沿用经典行为，完全在服务器端生成，不依赖任何外部 JavaScript 库。由 OJSBR 制作。"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.title"
+msgstr "关键词"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.uses"
+msgstr "篇文章"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.sampleNote"
+msgstr "示例展示——本期刊尚无已发表的关键词。"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.description"
+msgstr "设置关键词云的外观以及显示多少关键词。"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.appearance"
+msgstr "外观"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.content"
+msgstr "内容"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.size"
+msgstr "区块大小"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.size.small"
+msgstr "小"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.size.medium"
+msgstr "中"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.size.large"
+msgstr "大"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.rotation"
+msgstr "旋转"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.rotation.horizontal"
+msgstr "仅横向"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.rotation.orthogonal"
+msgstr "横向与纵向"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.rotation.diagonal"
+msgstr "多样（含斜向）"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.palette"
+msgstr "配色方案"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.palette.soft"
+msgstr "柔和"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.palette.vibrant"
+msgstr "鲜艳"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.palette.mono"
+msgstr "单色（蓝）"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.font"
+msgstr "字体"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.font.serif"
+msgstr "衬线"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.font.sans"
+msgstr "无衬线"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.font.rounded"
+msgstr "圆角"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.numKeywords"
+msgstr "关键词数量"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.minFont"
+msgstr "最小字号（px）"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.maxFont"
+msgstr "最大字号（px）"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.sampleWhenEmpty"
+msgstr "当期刊尚无关键词时显示示例词云"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.heightPx"
+msgstr "区块高度（px，0 = 自动）"

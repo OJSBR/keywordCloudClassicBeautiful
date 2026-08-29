@@ -1,0 +1,125 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: ru\n"
+
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.displayName"
+msgstr "Облако ключевых слов (классическое) — OJSBR"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.description"
+msgstr "Облако в боковой панели с ключевыми словами статей журнала: размер и цвет зависят от частоты использования — классическое поведение, полностью формируемое на сервере, без внешней JavaScript-библиотеки. От OJSBR."
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.title"
+msgstr "Ключевые слова"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.uses"
+msgstr "статья(и)"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.sampleNote"
+msgstr "Иллюстративный пример — в этом журнале ещё нет опубликованных ключевых слов."
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.description"
+msgstr "Настройте вид облака ключевых слов и количество отображаемых слов."
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.appearance"
+msgstr "Оформление"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.content"
+msgstr "Содержимое"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.size"
+msgstr "Размер блока"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.size.small"
+msgstr "Маленький"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.size.medium"
+msgstr "Средний"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.size.large"
+msgstr "Большой"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.rotation"
+msgstr "Поворот"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.rotation.horizontal"
+msgstr "Только горизонтально"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.rotation.orthogonal"
+msgstr "Горизонтально и вертикально"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.rotation.diagonal"
+msgstr "Разнообразный (с диагоналями)"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.palette"
+msgstr "Цветовая палитра"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.palette.soft"
+msgstr "Мягкая"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.palette.vibrant"
+msgstr "Яркая"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.palette.mono"
+msgstr "Монохромная (синяя)"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.font"
+msgstr "Шрифт"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.font.serif"
+msgstr "С засечками"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.font.sans"
+msgstr "Без засечек"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.font.rounded"
+msgstr "Скруглённый"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.numKeywords"
+msgstr "Количество ключевых слов"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.minFont"
+msgstr "Наименьший размер шрифта (px)"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.maxFont"
+msgstr "Наибольший размер шрифта (px)"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.sampleWhenEmpty"
+msgstr "Показывать пример облака, пока у журнала нет ключевых слов"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.heightPx"
+msgstr "Высота блока в px (0 = автоматически)"

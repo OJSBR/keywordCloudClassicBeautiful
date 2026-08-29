@@ -1,0 +1,125 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: fi\n"
+
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.displayName"
+msgstr "Avainsanapilvi (perinteinen) — OJSBR"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.description"
+msgstr "Sivupalkin pilvi lehden artikkelien avainsanoista, joiden koko ja väri seuraavat käyttötiheyttä — perinteinen toimintatapa, tuotettu kokonaan palvelimella ilman ulkoista JavaScript-kirjastoa. Tekijä OJSBR."
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.title"
+msgstr "Avainsanat"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.uses"
+msgstr "artikkeli(a)"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.sampleNote"
+msgstr "Havainnollistava esimerkki — tässä lehdessä ei vielä ole julkaistuja avainsanoja."
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.description"
+msgstr "Määritä avainsanapilven ulkoasu ja näytettävien avainsanojen määrä."
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.appearance"
+msgstr "Ulkoasu"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.content"
+msgstr "Sisältö"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.size"
+msgstr "Lohkon koko"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.size.small"
+msgstr "Pieni"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.size.medium"
+msgstr "Keskikokoinen"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.size.large"
+msgstr "Suuri"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.rotation"
+msgstr "Kierto"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.rotation.horizontal"
+msgstr "Vain vaaka"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.rotation.orthogonal"
+msgstr "Vaaka ja pysty"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.rotation.diagonal"
+msgstr "Vaihteleva (myös vinottain)"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.palette"
+msgstr "Väripaletti"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.palette.soft"
+msgstr "Pehmeä"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.palette.vibrant"
+msgstr "Eloisa"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.palette.mono"
+msgstr "Yksivärinen (sininen)"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.font"
+msgstr "Kirjasin"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.font.serif"
+msgstr "Päätteellinen"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.font.sans"
+msgstr "Päätteetön"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.font.rounded"
+msgstr "Pyöristetty"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.numKeywords"
+msgstr "Avainsanojen määrä"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.minFont"
+msgstr "Pienin kirjasinkoko (px)"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.maxFont"
+msgstr "Suurin kirjasinkoko (px)"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.sampleWhenEmpty"
+msgstr "Näytä esimerkkipilvi, kun lehdellä ei vielä ole avainsanoja"
+
+#, fuzzy
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.heightPx"
+msgstr "Lohkon korkeus pikseleinä (0 = automaattinen)"

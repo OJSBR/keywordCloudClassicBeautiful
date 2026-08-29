@@ -1,0 +1,96 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: nl\n"
+
+
+msgid "plugins.block.keywordCloudClassicBeautiful.displayName"
+msgstr "Trefwoordenwolk (klassiek) — OJSBR"
+
+msgid "plugins.block.keywordCloudClassicBeautiful.description"
+msgstr "Wolk in de zijbalk met de trefwoorden van de artikelen van het tijdschrift, waarvan grootte en kleur de gebruiksfrequentie volgen — het klassieke gedrag, volledig op de server gegenereerd en zonder externe JavaScript-bibliotheek. Door OJSBR."
+
+msgid "plugins.block.keywordCloudClassicBeautiful.title"
+msgstr "Trefwoorden"
+
+msgid "plugins.block.keywordCloudClassicBeautiful.uses"
+msgstr "artikel(en)"
+
+msgid "plugins.block.keywordCloudClassicBeautiful.sampleNote"
+msgstr "Illustratief voorbeeld — dit tijdschrift heeft nog geen gepubliceerde trefwoorden."
+
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.description"
+msgstr "Stel in hoe de trefwoordenwolk eruitziet en hoeveel trefwoorden ze toont."
+
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.appearance"
+msgstr "Weergave"
+
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.content"
+msgstr "Inhoud"
+
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.size"
+msgstr "Blokgrootte"
+
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.size.small"
+msgstr "Klein"
+
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.size.medium"
+msgstr "Middel"
+
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.size.large"
+msgstr "Groot"
+
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.rotation"
+msgstr "Rotatie"
+
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.rotation.horizontal"
+msgstr "Alleen horizontaal"
+
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.rotation.orthogonal"
+msgstr "Horizontaal en verticaal"
+
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.rotation.diagonal"
+msgstr "Gevarieerd (met diagonalen)"
+
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.palette"
+msgstr "Kleurenpalet"
+
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.palette.soft"
+msgstr "Zacht"
+
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.palette.vibrant"
+msgstr "Levendig"
+
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.palette.mono"
+msgstr "Monochroom (blauw)"
+
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.font"
+msgstr "Lettertype"
+
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.font.serif"
+msgstr "Met schreef"
+
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.font.sans"
+msgstr "Schreefloos"
+
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.font.rounded"
+msgstr "Afgerond"
+
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.numKeywords"
+msgstr "Aantal trefwoorden"
+
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.minFont"
+msgstr "Kleinste lettergrootte (px)"
+
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.maxFont"
+msgstr "Grootste lettergrootte (px)"
+
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.sampleWhenEmpty"
+msgstr "Toon een voorbeeldwolk zolang het tijdschrift nog geen trefwoorden heeft"
+
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.heightPx"
+msgstr "Blokhoogte in px (0 = automatisch)"

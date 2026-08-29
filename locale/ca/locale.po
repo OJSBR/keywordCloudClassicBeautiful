@@ -1,0 +1,96 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: ca\n"
+
+
+msgid "plugins.block.keywordCloudClassicBeautiful.displayName"
+msgstr "Núvol de paraules clau (clàssic) — OJSBR"
+
+msgid "plugins.block.keywordCloudClassicBeautiful.description"
+msgstr "Núvol a la barra lateral amb les paraules clau dels articles de la revista, dimensionades i acolorides segons la freqüència d'ús — el comportament clàssic, generat íntegrament al servidor i sense cap biblioteca JavaScript externa. Per OJSBR."
+
+msgid "plugins.block.keywordCloudClassicBeautiful.title"
+msgstr "Paraules clau"
+
+msgid "plugins.block.keywordCloudClassicBeautiful.uses"
+msgstr "article(s)"
+
+msgid "plugins.block.keywordCloudClassicBeautiful.sampleNote"
+msgstr "Mostra il·lustrativa: aquesta revista encara no té paraules clau publicades."
+
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.description"
+msgstr "Configureu l'aspecte del núvol de paraules clau i quantes paraules mostra."
+
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.appearance"
+msgstr "Aparença"
+
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.content"
+msgstr "Contingut"
+
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.size"
+msgstr "Mida del bloc"
+
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.size.small"
+msgstr "Petit"
+
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.size.medium"
+msgstr "Mitjà"
+
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.size.large"
+msgstr "Gran"
+
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.rotation"
+msgstr "Rotació"
+
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.rotation.horizontal"
+msgstr "Només horitzontal"
+
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.rotation.orthogonal"
+msgstr "Horitzontal i vertical"
+
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.rotation.diagonal"
+msgstr "Variat (amb diagonals)"
+
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.palette"
+msgstr "Paleta de colors"
+
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.palette.soft"
+msgstr "Suau"
+
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.palette.vibrant"
+msgstr "Vibrant"
+
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.palette.mono"
+msgstr "Monocrom (blau)"
+
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.font"
+msgstr "Tipus de lletra"
+
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.font.serif"
+msgstr "Serif"
+
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.font.sans"
+msgstr "Sans-serif"
+
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.font.rounded"
+msgstr "Arrodonit"
+
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.numKeywords"
+msgstr "Nombre de paraules clau"
+
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.minFont"
+msgstr "Mida de lletra més petita (px)"
+
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.maxFont"
+msgstr "Mida de lletra més gran (px)"
+
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.sampleWhenEmpty"
+msgstr "Mostra un núvol d'exemple quan la revista encara no tingui paraules clau"
+
+msgid "plugins.block.keywordCloudClassicBeautiful.settings.heightPx"
+msgstr "Alçada del bloc en px (0 = automàtica)"
