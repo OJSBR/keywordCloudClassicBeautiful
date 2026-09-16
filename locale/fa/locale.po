@@ -10,11 +10,11 @@ msgstr ""
 
 #, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.displayName"
-msgstr "ابر کلیدواژه (کلاسیک) — OJSBR"
+msgstr "Keyword Cloud (Classic)"
 
 #, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.description"
-msgstr "ابر کلیدواژه‌های مقاله‌های نشریه در نوار کناری، با اندازه و رنگ متناسب با بسامد هر کلیدواژه — همان رفتار کلاسیک، کاملاً در سمت سرور و بدون کتابخانهٔ جاوااسکریپت بیرونی. از OJSBR."
+msgstr "Sidebar cloud of the published keywords, sized and coloured by how often each keyword is used, packed with a layout library shipped with the plugin. Without JavaScript it degrades to a list of links."
 
 #, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.title"

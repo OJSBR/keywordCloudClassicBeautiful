@@ -10,11 +10,11 @@ msgstr ""
 
 #, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.displayName"
-msgstr "Νέφος λέξεων-κλειδιών (κλασικό) — OJSBR"
+msgstr "Keyword Cloud (Classic)"
 
 #, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.description"
-msgstr "Νέφος στην πλαϊνή στήλη με τις λέξεις-κλειδιά των άρθρων του περιοδικού, με μέγεθος και χρώμα ανάλογα με τη συχνότητα χρήσης — η κλασική συμπεριφορά, με πλήρη παραγωγή στον διακομιστή και χωρίς εξωτερική βιβλιοθήκη JavaScript. Από την OJSBR."
+msgstr "Sidebar cloud of the published keywords, sized and coloured by how often each keyword is used, packed with a layout library shipped with the plugin. Without JavaScript it degrades to a list of links."
 
 #, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.title"

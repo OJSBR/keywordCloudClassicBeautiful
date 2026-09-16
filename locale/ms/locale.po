@@ -10,11 +10,11 @@ msgstr ""
 
 #, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.displayName"
-msgstr "Awan kata kunci (klasik) — OJSBR"
+msgstr "Keyword Cloud (Classic)"
 
 #, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.description"
-msgstr "Awan pada bar sisi bagi kata kunci artikel jurnal, bersaiz dan berwarna mengikut kekerapan penggunaan setiap kata — kelakuan klasik, dibina sepenuhnya di pelayan tanpa pustaka JavaScript luaran. Oleh OJSBR."
+msgstr "Sidebar cloud of the published keywords, sized and coloured by how often each keyword is used, packed with a layout library shipped with the plugin. Without JavaScript it degrades to a list of links."
 
 #, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.title"

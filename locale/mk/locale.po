@@ -10,11 +10,11 @@ msgstr ""
 
 #, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.displayName"
-msgstr "Облак од клучни зборови (класичен) — OJSBR"
+msgstr "Keyword Cloud (Classic)"
 
 #, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.description"
-msgstr "Облак во страничната лента со клучните зборови од трудовите на списанието, со големина и боја според честотата на употреба — класичното однесување, изградено целосно на серверот и без надворешна JavaScript библиотека. Од OJSBR."
+msgstr "Sidebar cloud of the published keywords, sized and coloured by how often each keyword is used, packed with a layout library shipped with the plugin. Without JavaScript it degrades to a list of links."
 
 #, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.title"

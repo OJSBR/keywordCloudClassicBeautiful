@@ -10,11 +10,11 @@ msgstr ""
 
 #, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.displayName"
-msgstr "Kulcsszófelhő (klasszikus) — OJSBR"
+msgstr "Keyword Cloud (Classic)"
 
 #, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.description"
-msgstr "Oldalsávban megjelenő felhő a folyóirat cikkeinek kulcsszavaiból, méretük és színük a használat gyakoriságát követi – a klasszikus működés, teljes egészében a kiszolgálón előállítva, külső JavaScript-könyvtár nélkül. Az OJSBR munkája."
+msgstr "Sidebar cloud of the published keywords, sized and coloured by how often each keyword is used, packed with a layout library shipped with the plugin. Without JavaScript it degrades to a list of links."
 
 #, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.title"

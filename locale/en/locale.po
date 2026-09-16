@@ -9,10 +9,10 @@ msgstr ""
 
 
 msgid "plugins.block.keywordCloudClassicBeautiful.displayName"
-msgstr "Keyword Cloud (Classic) — OJSBR"
+msgstr "Keyword Cloud (Classic)"
 
 msgid "plugins.block.keywordCloudClassicBeautiful.description"
-msgstr "Sidebar cloud of the journal’s article keywords, sized and coloured by how often each keyword is used — the classic behaviour, rendered fully server-side with no external JavaScript library. By OJSBR."
+msgstr "Sidebar cloud of the published keywords, sized and coloured by how often each keyword is used, packed with a layout library shipped with the plugin. Without JavaScript it degrades to a list of links."
 
 msgid "plugins.block.keywordCloudClassicBeautiful.title"
 msgstr "Keywords"

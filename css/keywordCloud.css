@@ -1,0 +1,47 @@
+/**
+ * @file plugins/blocks/keywordCloudClassicBeautiful/css/keywordCloud.css
+ *
+ * Copyright (c) 2026 OJSBR (https://ojsbr.com)
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
+ *
+ * The cloud in the sidebar: the caps that stop the canvas from forcing its column
+ * open, the accessible list it degrades to, and the hover overlay.
+ */
+/* The block must never be able to force its container open. A <canvas> has
+   an intrinsic size, so without these caps it can pin a flex or grid column
+   and starve its siblings — the theme has no way to defend against it. */
+.block_keyword_cloud_classic { max-width: 100%; min-width: 0; }
+.block_keyword_cloud_classic .ojsbrKwc { position: relative; max-width: 100%; min-width: 0; }
+.block_keyword_cloud_classic .ojsbrKwc__canvas { display: none; width: 100%; max-width: 100%; height: auto; }
+.block_keyword_cloud_classic .ojsbrKwc--rendered .ojsbrKwc__canvas { display: block; margin: 0 auto; }
+.block_keyword_cloud_classic .ojsbrKwc__list {
+	list-style: none; margin: 0; padding: 0.3em 0;
+	display: flex; flex-wrap: wrap; align-items: center; justify-content: center;
+	gap: 0.1em 0.45em; line-height: 1.1;
+}
+.block_keyword_cloud_classic .ojsbrKwc__list li { display: inline; margin: 0; padding: 0; }
+.block_keyword_cloud_classic .ojsbrKwc__list a {
+	display: inline-block; text-decoration: none;
+	transition: transform 0.15s ease, filter 0.15s ease;
+}
+.block_keyword_cloud_classic .ojsbrKwc__list a:hover,
+.block_keyword_cloud_classic .ojsbrKwc__list a:focus {
+	transform: scale(1.12); filter: saturate(1.3) brightness(1.05); opacity: 1 !important;
+}
+.block_keyword_cloud_classic .ojsbrKwc--rendered .ojsbrKwc__list {
+	position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+	overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+.block_keyword_cloud_classic .ojsbrKwc__hl {
+	position: absolute; left: 0; top: 0;
+	transform-origin: center center;
+	white-space: nowrap; pointer-events: none; cursor: pointer;
+	opacity: 0; z-index: 5;
+	text-shadow: 0 1px 3px rgba(0,0,0,0.22), 0 0 12px rgba(255,255,255,0.6);
+	transition: transform 0.16s cubic-bezier(.34,1.56,.64,1), opacity 0.16s ease;
+}
+.block_keyword_cloud_classic .ojsbrKwc__hl.is-visible { pointer-events: auto; }
+.block_keyword_cloud_classic .ojsbrKwc__sample {
+	margin: 0.4em 0 0; font-size: 11px; line-height: 1.3;
+	opacity: 0.6; text-align: center; font-style: italic;
+}

@@ -29,7 +29,7 @@ Base your work on — and open your pull request against — the branch that mat
    uses namespaced, PSR-4 classes (`APP\plugins\blocks\keywordCloudClassicBeautiful`).
 4. Add/keep translation strings in `locale/<lang>/locale.po`. The plugin ships **7 locales**
    (`en`, `pt_BR`, `pt`, `es`, `fr_FR`, `it`, `de`) — keep them in sync when you add a key.
-5. The word-cloud layout library in `js/wordcloud2.js` is a **vendored** copy of
+5. The word-cloud layout library in `lib/wordcloud2/wordcloud2.js` is a **vendored** copy of
    [wordcloud2.js](https://github.com/timdream/wordcloud2.js) (MIT) with one small change,
    marked `/* OJSBR patch */`. If you update it, re-apply that patch and keep the MIT header.
 6. When your change is user-visible, bump `<release>` and `<date>` in `version.xml`.
@@ -67,7 +67,7 @@ seu trabalho — e abra o pull request — na branch da versão que você está 
    usa classes com namespace, PSR-4 (`APP\plugins\blocks\keywordCloudClassicBeautiful`).
 4. Mantenha as strings em `locale/<idioma>/locale.po`. O plugin traz **7 locales**
    (`en`, `pt_BR`, `pt`, `es`, `fr_FR`, `it`, `de`) — mantenha-os em dia ao adicionar chaves.
-5. A biblioteca em `js/wordcloud2.js` é uma cópia **embarcada** do
+5. A biblioteca em `lib/wordcloud2/wordcloud2.js` é uma cópia **embarcada** do
    [wordcloud2.js](https://github.com/timdream/wordcloud2.js) (MIT) com uma pequena alteração,
    marcada `/* OJSBR patch */`. Ao atualizá-la, reaplique o patch e mantenha o cabeçalho MIT.
 6. Em mudanças visíveis ao usuário, incremente `<release>` e `<date>` no `version.xml`.

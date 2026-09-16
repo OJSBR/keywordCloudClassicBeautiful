@@ -10,11 +10,11 @@ msgstr ""
 
 #, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.displayName"
-msgstr "Đám mây từ khóa (cổ điển) — OJSBR"
+msgstr "Keyword Cloud (Classic)"
 
 #, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.description"
-msgstr "Đám mây ở thanh bên gồm các từ khóa của bài báo trong tạp chí, kích cỡ và màu sắc theo tần suất sử dụng — hành vi cổ điển, dựng hoàn toàn ở phía máy chủ, không dùng thư viện JavaScript bên ngoài. Của OJSBR."
+msgstr "Sidebar cloud of the published keywords, sized and coloured by how often each keyword is used, packed with a layout library shipped with the plugin. Without JavaScript it degrades to a list of links."
 
 #, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.title"

@@ -9,10 +9,10 @@ msgstr ""
 
 
 msgid "plugins.block.keywordCloudClassicBeautiful.displayName"
-msgstr "Trefwoordenwolk (klassiek) — OJSBR"
+msgstr "Trefwoordenwolk (klassiek)"
 
 msgid "plugins.block.keywordCloudClassicBeautiful.description"
-msgstr "Wolk in de zijbalk met de trefwoorden van de artikelen van het tijdschrift, waarvan grootte en kleur de gebruiksfrequentie volgen — het klassieke gedrag, volledig op de server gegenereerd en zonder externe JavaScript-bibliotheek. Door OJSBR."
+msgstr "Wolk in de zijbalk met de gepubliceerde trefwoorden, waarvan grootte en kleur de frequentie volgen, opgebouwd met een layoutbibliotheek die met de plug-in wordt meegeleverd. Zonder JavaScript blijft een lijst met links over."
 
 msgid "plugins.block.keywordCloudClassicBeautiful.title"
 msgstr "Trefwoorden"

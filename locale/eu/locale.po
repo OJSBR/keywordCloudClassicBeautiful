@@ -10,11 +10,11 @@ msgstr ""
 
 #, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.displayName"
-msgstr "Gako-hitzen hodeia (klasikoa) — OJSBR"
+msgstr "Keyword Cloud (Classic)"
 
 #, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.description"
-msgstr "Alboko barran aldizkariaren artikuluen gako-hitzen hodeia, bakoitzaren erabilera-maiztasunaren arabera neurtua eta koloreztatua — portaera klasikoa, osorik zerbitzarian sortua eta kanpoko JavaScript liburutegirik gabe. OJSBRk egina."
+msgstr "Sidebar cloud of the published keywords, sized and coloured by how often each keyword is used, packed with a layout library shipped with the plugin. Without JavaScript it degrades to a list of links."
 
 #, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.title"

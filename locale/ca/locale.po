@@ -9,10 +9,10 @@ msgstr ""
 
 
 msgid "plugins.block.keywordCloudClassicBeautiful.displayName"
-msgstr "Núvol de paraules clau (clàssic) — OJSBR"
+msgstr "Núvol de paraules clau (clàssic)"
 
 msgid "plugins.block.keywordCloudClassicBeautiful.description"
-msgstr "Núvol a la barra lateral amb les paraules clau dels articles de la revista, dimensionades i acolorides segons la freqüència d'ús — el comportament clàssic, generat íntegrament al servidor i sense cap biblioteca JavaScript externa. Per OJSBR."
+msgstr "Núvol a la barra lateral amb les paraules clau publicades, amb mida i color segons la freqüència de cadascuna, compost per una biblioteca de disseny inclosa al connector. Sense JavaScript queda una llista d'enllaços."
 
 msgid "plugins.block.keywordCloudClassicBeautiful.title"
 msgstr "Paraules clau"

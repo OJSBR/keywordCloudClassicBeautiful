@@ -9,10 +9,10 @@ msgstr ""
 
 
 msgid "plugins.block.keywordCloudClassicBeautiful.displayName"
-msgstr "Nuage de mots-clés (classique) — OJSBR"
+msgstr "Nuage de mots-clés (classique)"
 
 msgid "plugins.block.keywordCloudClassicBeautiful.description"
-msgstr "Nuage en barre latérale des mots-clés des articles de la revue, dont la taille et la couleur suivent la fréquence d'utilisation — le comportement classique, produit entièrement côté serveur et sans bibliothèque JavaScript externe. Par OJSBR."
+msgstr "Nuage dans la barre latérale avec les mots-clés publiés, dont la taille et la couleur suivent la fréquence de chacun, composé par une bibliothèque de mise en page fournie avec le plugin. Sans JavaScript, il devient une liste de liens."
 
 msgid "plugins.block.keywordCloudClassicBeautiful.title"
 msgstr "Mots-clés"

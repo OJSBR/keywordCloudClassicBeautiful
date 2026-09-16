@@ -9,10 +9,10 @@ msgstr ""
 
 
 msgid "plugins.block.keywordCloudClassicBeautiful.displayName"
-msgstr "Nube de palabras clave (clásica) — OJSBR"
+msgstr "Nube de palabras clave (clásica)"
 
 msgid "plugins.block.keywordCloudClassicBeautiful.description"
-msgstr "Nube na barra lateral coas palabras clave dos artigos da revista, dimensionadas e coloreadas segundo a frecuencia de uso — o comportamento clásico, xerado integramente no servidor e sen bibliotecas JavaScript externas. Por OJSBR."
+msgstr "Nube na barra lateral coas palabras clave publicadas, con tamaño e cor segundo a frecuencia de cada unha, composta por unha biblioteca de deseño incluída no complemento. Sen JavaScript queda unha lista de ligazóns."
 
 msgid "plugins.block.keywordCloudClassicBeautiful.title"
 msgstr "Palabras clave"
