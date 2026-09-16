@@ -9,7 +9,7 @@
  * @class KeywordCloudClassicBeautifulBlockPlugin
  *
  * @brief Sidebar keyword cloud that sizes, colours and packs each keyword by how
- *        often it is used across the journal's published articles — a real word
+ *        often it is used across the published works of the journal or press — a real word
  *        cloud (varied sizes, positions, rotations and colours) drawn with a
  *        vendored, self-contained layout library, so it can never break from a
  *        CDN or library change. Degrades to an accessible list of links.
@@ -24,6 +24,7 @@ use APP\submission\Submission;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
 use PKP\context\Context;
+use PKP\submission\SubmissionKeywordDAO;
 use PKP\core\JSONMessage;
 use PKP\core\PKPApplication;
 use PKP\facades\Locale;
@@ -39,7 +40,7 @@ class KeywordCloudClassicBeautifulBlockPlugin extends BlockPlugin
     /** Cache lifetime for the aggregated keyword counts, in days. */
     private const CACHE_DAYS = 2;
 
-    /** Show a representative sample when the journal has (almost) no keywords. */
+    /** Show a representative sample when the journal or press has (almost) no keywords. */
     private const SAMPLE_MIN_REAL = 4;
 
     /** Default settings. */
@@ -120,12 +121,13 @@ class KeywordCloudClassicBeautifulBlockPlugin extends BlockPlugin
         $items = $this->styleItems($counts, $request, $context, $contextId);
 
         // Vendored, self-contained layout library (never fetched from a CDN at
-        // runtime — that is exactly what broke the original plugin).
-        $templateMgr->addJavaScript(
-            'wordcloud2',
-            $request->getBaseUrl() . '/' . $this->getPluginPath() . '/js/wordcloud2.js',
-            ['contexts' => 'frontend']
-        );
+        // runtime — that is exactly what broke the original plugin), and the plugin's
+        // own script and stylesheet.
+        $assetsUrl = $request->getBaseUrl() . '/' . $this->getPluginPath();
+        $templateMgr->addJavaScript('wordcloud2', $assetsUrl . '/lib/wordcloud2/wordcloud2.js', ['contexts' => 'frontend']);
+        $templateMgr->addJavaScript('keywordCloudClassicBeautiful', $assetsUrl . '/js/keywordCloud.js', ['contexts' => 'frontend']);
+        // Blocks are rendered after the page head, so the stylesheet is linked by the
+        // template itself (addStyleSheet would never reach the head).
 
         $sizeRatios = ['small' => 0.68, 'medium' => 0.92, 'large' => 1.25];
         $fontStacks = [
@@ -143,6 +145,7 @@ class KeywordCloudClassicBeautifulBlockPlugin extends BlockPlugin
             'kwcHeightRatio' => $sizeRatios[$size] ?? $sizeRatios[self::DEFAULTS['size']],
             'kwcHeightPx' => max(0, (int) $this->setting($contextId, 'heightPx')),
             'kwcFontStack' => $fontStacks[$font] ?? $fontStacks['serif'],
+            'kwcStyleUrl' => $assetsUrl . '/css/keywordCloud.css',
         ]);
 
         return parent::getContents($templateMgr, $request);
@@ -157,20 +160,20 @@ class KeywordCloudClassicBeautifulBlockPlugin extends BlockPlugin
         $expiration = \DateInterval::createFromDateString(self::CACHE_DAYS . ' days');
 
         return Cache::remember($cacheKey, $expiration, function () use ($context, $locale) {
-            return $this->getJournalKeywordCounts($context->getId(), $locale);
+            return $this->getContextKeywordCounts($context->getId(), $locale);
         });
     }
 
     /**
-     * Count how many published publications use each keyword.
+     * Count how many published publications (articles or monographs) use each keyword.
      *
      * @return array<string,int>
      */
-    private function getJournalKeywordCounts(int $journalId, string $locale): array
+    private function getContextKeywordCounts(int $contextId, string $locale): array
     {
         $publicationIds = Repo::publication()
             ->getCollector()
-            ->filterByContextIds([$journalId])
+            ->filterByContextIds([$contextId])
             ->getQueryBuilder()
             ->whereIn('p.status', [Submission::STATUS_PUBLISHED])
             ->select('p.publication_id')
@@ -181,16 +184,17 @@ class KeywordCloudClassicBeautifulBlockPlugin extends BlockPlugin
             return [];
         }
 
-        // One query for every keyword of every published publication (avoids an
-        // N+1). On OJS 3.4 the submission-keyword text is stored in
-        // controlled_vocab_entry_settings under setting_name = 'submissionKeyword'.
+        // One query for every keyword of every published publication, instead of a
+        // per-publication call. That call was both an N+1 and — because
+        // getBySymbolic() returned arrays of entry metadata rather than plain strings.
+        // On OJS 3.4 the keyword text is stored under setting_name = 'submissionKeyword'.
         $values = DB::table('controlled_vocabs as cv')
             ->join('controlled_vocab_entries as cve', 'cve.controlled_vocab_id', '=', 'cv.controlled_vocab_id')
             ->join('controlled_vocab_entry_settings as cves', 'cves.controlled_vocab_entry_id', '=', 'cve.controlled_vocab_entry_id')
-            ->where('cv.symbolic', 'submissionKeyword')
+            ->where('cv.symbolic', SubmissionKeywordDAO::CONTROLLED_VOCAB_SUBMISSION_KEYWORD)
             ->where('cv.assoc_type', Application::ASSOC_TYPE_PUBLICATION)
             ->whereIn('cv.assoc_id', $publicationIds)
-            ->where('cves.setting_name', 'submissionKeyword')
+            ->where('cves.setting_name', SubmissionKeywordDAO::CONTROLLED_VOCAB_SUBMISSION_KEYWORD)
             ->where('cves.locale', $locale)
             ->pluck('cves.setting_value');
 

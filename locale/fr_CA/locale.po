@@ -5,7 +5,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Last-Translator: OJSBR\n"
 "Language-Team: OJSBR\n"
-"Language: fr_FR\n"
+"Language: fr_CA\n"
 
 
 msgid "plugins.block.keywordCloudClassicBeautiful.displayName"
@@ -21,10 +21,10 @@ msgid "plugins.block.keywordCloudClassicBeautiful.uses"
 msgstr "article(s)"
 
 msgid "plugins.block.keywordCloudClassicBeautiful.sampleNote"
-msgstr "Exemple illustratif — cette revue n’a pas encore de mots-clés publiés."
+msgstr "Échantillon illustratif — cette revue n'a pas encore de mots-clés publiés."
 
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.description"
-msgstr "Configurez l’apparence du nuage de mots-clés et le nombre de mots affichés."
+msgstr "Configurez l'apparence du nuage de mots-clés et le nombre de mots affichés."
 
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.appearance"
 msgstr "Apparence"
@@ -48,22 +48,22 @@ msgid "plugins.block.keywordCloudClassicBeautiful.settings.rotation"
 msgstr "Rotation"
 
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.rotation.horizontal"
-msgstr "Horizontal uniquement"
+msgstr "Horizontal seulement"
 
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.rotation.orthogonal"
 msgstr "Horizontal et vertical"
 
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.rotation.diagonal"
-msgstr "Variée (avec diagonales)"
+msgstr "Varié (avec diagonales)"
 
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.palette"
 msgstr "Palette de couleurs"
 
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.palette.soft"
-msgstr "Douce"
+msgstr "Doux"
 
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.palette.vibrant"
-msgstr "Vive"
+msgstr "Vif"
 
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.palette.mono"
 msgstr "Monochrome (bleu)"
@@ -72,25 +72,25 @@ msgid "plugins.block.keywordCloudClassicBeautiful.settings.font"
 msgstr "Police"
 
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.font.serif"
-msgstr "Serif"
+msgstr "Avec empattement"
 
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.font.sans"
-msgstr "Sans serif"
+msgstr "Sans empattement"
 
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.font.rounded"
-msgstr "Arrondie"
+msgstr "Arrondi"
 
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.numKeywords"
 msgstr "Nombre de mots-clés"
 
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.minFont"
-msgstr "Taille de police minimale (px)"
+msgstr "Taille de police la plus petite (px)"
 
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.maxFont"
-msgstr "Taille de police maximale (px)"
+msgstr "Taille de police la plus grande (px)"
 
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.sampleWhenEmpty"
-msgstr "Afficher un nuage d’exemple lorsque la revue n’a pas encore de mots-clés"
+msgstr "Afficher un nuage d'exemple quand la revue n'a pas encore de mots-clés"
 
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.heightPx"
 msgstr "Hauteur du bloc en px (0 = automatique)"

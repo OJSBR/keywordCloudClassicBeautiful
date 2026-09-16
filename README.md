@@ -1,10 +1,10 @@
 # Keyword Cloud (Classic · Beautiful) — OJS plugin
 
 [![OJS](https://img.shields.io/badge/OJS-3.4%20%7C%203.5-brightgreen)](https://pkp.sfu.ca/ojs/)
-[![Version](https://img.shields.io/badge/version-1.0.2.0--ojs3.4-blue)](version.xml)
+[![Version](https://img.shields.io/badge/version-1.0.3.0-blue)](version.xml)
 [![License](https://img.shields.io/badge/license-GPL--3.0-lightgrey)](LICENSE)
 
-**⬇️ Install package:** [OJS 3.5](https://github.com/OJSBR/keywordCloudClassicBeautiful/releases/download/1.0.2.0/keywordCloudClassicBeautiful-1.0.2.0.tar.gz) · [OJS 3.4](https://github.com/OJSBR/keywordCloudClassicBeautiful/releases/download/1.0.2.0-ojs3.4/keywordCloudClassicBeautiful-1.0.2.0-ojs3.4.tar.gz) — or browse all [Releases](../../releases).
+**⬇️ Install package:** [OJS / OMP 3.5](https://github.com/OJSBR/keywordCloudClassicBeautiful/releases/download/1.0.3.0/keywordCloudClassicBeautiful-1.0.3.0.tar.gz) · [OJS 3.4](https://github.com/OJSBR/keywordCloudClassicBeautiful/releases/download/1.0.3.0-ojs3.4/keywordCloudClassicBeautiful-1.0.3.0-ojs3.4.tar.gz) — or browse all [Releases](../../releases).
 
 A **block plugin** for **Open Journal Systems (OJS)** that renders a **real, packed keyword
 cloud** in the sidebar — where each keyword is **sized and coloured by how often it is used**
@@ -26,10 +26,13 @@ bundled library — no external CDN**, so it can never break from a remote libra
 
 ## Compatibility & branches
 
-| OJS version | Branch | Plugin release |
+| Application | Branch | Plugin release |
 |-------------|--------|----------------|
-| OJS 3.5.x   | [`stable-3_5_0`](../../tree/stable-3_5_0) *(default)* | 1.0.2.0 |
-| OJS 3.4.x   | [`stable-3_4_0`](../../tree/stable-3_4_0) | 1.0.2.0-ojs3.4 |
+| OJS 3.5.x and OMP 3.5.x | [`stable-3_5_0`](../../tree/stable-3_5_0) *(default)* | 1.0.3.0 |
+| OJS 3.4.x | [`stable-3_4_0`](../../tree/stable-3_4_0) | 1.0.3.0-ojs3.4 |
+
+> Since 1.0.3.0 the OJS and the OMP editions are the same code, in this repository. The former
+> `keywordCloudClassicBeautifulOmp` repository is archived; its releases stay available there.
 
 ## What it does
 
@@ -73,14 +76,40 @@ Enable the plugin, then place it in **Settings → Website → Appearance → Si
 ## How it works (technical)
 
 - It reads the **submission keywords** (`controlledVocab` of type `submissionKeyword`) of every
-  **published** publication in the journal, per locale, and counts how many publications use
-  each keyword.
+  **published** publication of the journal or press, per locale, and counts how many
+  publications use each keyword, in a single query.
 - Font size, weight, colour and opacity are computed **server-side** in PHP; the cloud is packed
   **client-side** on a `<canvas>` using a bundled copy of **wordcloud2.js**.
 - To let the hover highlight sit **at each word's real angle**, the bundled library carries a
   tiny, documented patch that exposes the per-word rotation to the `hover()` callback
   (marked `/* OJSBR patch */`).
-- Results are cached for two days (`Cache::remember`).
+- Results are cached for two days (`Cache::remember`), per context and language.
+- The styles and the script of the block are files of the plugin (`css/keywordCloud.css` and
+  `js/keywordCloud.js`); the stylesheet is linked by the block template, because a block is
+  rendered after the page head.
+
+## Tests
+
+- **PHPUnit** (`tests/*Test.php`, on `PKP\tests\PKPTestCase`): the class against the installed
+  PKP, the plugin found by PKP's plugin registry, a setting that was never saved falling back to
+  its default, every palette, the sample sets and their fallback to English, the ceiling on the
+  number of keywords and the cache key, the styles and the script being files of the plugin (and
+  the layout library the vendored copy, never a CDN), the size, colour and search link of each
+  word, the templates and the 38 translations. From the application root:
+
+  ```bash
+  lib/pkp/lib/vendor/bin/phpunit --configuration lib/pkp/tests/phpunit.xml --no-coverage "$PWD/plugins/blocks/keywordCloudClassicBeautiful/tests"
+  ```
+
+- **Cypress** (`cypress/tests/functional/KeywordCloudClassicBeautiful.cy.js`, run by
+  [pkp-github-actions](https://github.com/pkp/pkp-github-actions) on OJS and OMP on every push):
+  enables the plugin, places the block in the sidebar and checks, as a reader, that the block
+  loads its own stylesheet and scripts once, that the keywords are links to the search, that the
+  canvas is there, and that the number of keywords the journal asked for is respected. The
+  sidebar and the settings are put back after the run.
+- Verified on OJS 3.5.0.3 and OMP 3.5.0.5, the same package on both.
+
+Tests are kept in the repository and are not part of the release package.
 
 ## Credits & acknowledgements
 
@@ -93,15 +122,21 @@ This plugin stands on the shoulders of earlier work, and we thank the developers
   for OJS 3.5 and **restores the classic frequency-based sizing**.
 - **[wordcloud2.js](https://github.com/timdream/wordcloud2.js)** — the word-cloud layout engine,
   © **Tim Guan-tin Chien and contributors**, released under the **MIT license**. It is bundled in
-  `js/wordcloud2.js` (with a small documented patch) and is **not** fetched from any CDN.
+  `lib/wordcloud2/wordcloud2.js` (with a small documented patch) and is **not** fetched from any CDN.
 - **The Public Knowledge Project (PKP)** — for OJS, its controlled-vocabulary/keyword data model
   and the plugin framework this builds on.
 - **This OJSBR edition** — the OJS 3.5 reimplementation, the restored frequency sizing, the
   self-contained rendering, the in-place hover highlight, the settings panel and the
   multilingual packaging — developed and maintained by **[OJSBR](https://ojsbr.com)**.
 
-**Third-party licenses:** `js/wordcloud2.js` is distributed under the MIT license (see the header
+**Third-party licenses:** `lib/wordcloud2/wordcloud2.js` is distributed under the MIT license (see the header
 of that file). All other files in this repository are distributed under the **GNU GPL v3**.
+
+## AI use
+
+Generative AI (Claude, by Anthropic) was used to write and run tests, improve the code and bring
+it in line with PKP standards. Every change is reviewed and tested by OJSBR, which is responsible
+for the published releases.
 
 ## Contributing
 
@@ -134,10 +169,13 @@ remota.
 
 ### Compatibilidade e branches
 
-| Versão do OJS | Branch | Release |
-|---------------|--------|---------|
-| OJS 3.5.x     | [`stable-3_5_0`](../../tree/stable-3_5_0) *(padrão)* | 1.0.2.0 |
-| OJS 3.4.x     | [`stable-3_4_0`](../../tree/stable-3_4_0) | 1.0.2.0-ojs3.4 |
+| Aplicação | Branch | Release |
+|-----------|--------|---------|
+| OJS 3.5.x e OMP 3.5.x | [`stable-3_5_0`](../../tree/stable-3_5_0) *(padrão)* | 1.0.3.0 |
+| OJS 3.4.x | [`stable-3_4_0`](../../tree/stable-3_4_0) | 1.0.3.0-ojs3.4 |
+
+> A partir da 1.0.3.0 as edições OJS e OMP são o mesmo código, neste repositório. O antigo
+> `keywordCloudClassicBeautifulOmp` está arquivado; as releases dele continuam disponíveis lá.
 
 ### O que faz
 
@@ -165,6 +203,21 @@ remota.
 Baixe o `.tar.gz` acima e envie em **Configurações → Site → Plugins → Enviar novo plugin**;
 depois posicione o bloco em **Configurações → Site → Aparência → Barra lateral**.
 
+### Testes
+
+PHPUnit em `tests/` (sobre `PKP\tests\PKPTestCase`) e Cypress em `cypress/tests/functional/`
+(rodado pelo [pkp-github-actions](https://github.com/pkp/pkp-github-actions) no OJS e no OMP a
+cada push), com o comando da seção em inglês. A suíte cobre a classe contra o PKP instalado, o
+plugin encontrado pelo registro de plugins, configuração nunca salva caindo no padrão, as paletas,
+os conjuntos de exemplo e o recuo para o inglês, o teto de palavras e a chave de cache, CSS e JS
+como arquivos do plugin (e a biblioteca de layout vendorizada, nunca de CDN), tamanho, cor e link
+de busca de cada palavra, os templates e as 38 traduções. O Cypress liga o plugin, põe o bloco na
+barra lateral e confere, como leitor, o CSS e os scripts carregados uma vez, as palavras como links
+para a busca, o canvas presente e o limite de palavras configurado; barra lateral e configuração
+voltam ao que eram no fim. Verificado no OJS 3.5.0.3 e no OMP 3.5.0.5, com o mesmo pacote.
+
+Os testes ficam no repositório e não fazem parte do pacote da release.
+
 ### Créditos e agradecimentos
 
 Este plugin se apoia em trabalho anterior, e agradecemos a quem veio antes:
@@ -175,7 +228,7 @@ Este plugin se apoia em trabalho anterior, e agradecemos a quem veio antes:
   ideia, a agregação de palavras-chave e a integração com o OJS. Esta edição o reimplementa para o
   OJS 3.5 e **restaura o dimensionamento clássico por frequência**.
 - **[wordcloud2.js](https://github.com/timdream/wordcloud2.js)** — o motor de layout da nuvem, ©
-  **Tim Guan-tin Chien e colaboradores**, sob licença **MIT**. Vem embarcado em `js/wordcloud2.js`
+  **Tim Guan-tin Chien e colaboradores**, sob licença **MIT**. Vem embarcado em `lib/wordcloud2/wordcloud2.js`
   (com um pequeno patch documentado) e **não** é buscado de nenhum CDN.
 - **O Public Knowledge Project (PKP)** — pelo OJS, seu modelo de vocabulário controlado /
   palavras-chave e o framework de plugins.
@@ -183,8 +236,14 @@ Este plugin se apoia em trabalho anterior, e agradecemos a quem veio antes:
   autocontida, o destaque no hover, o painel de configurações e o empacotamento multilíngue —
   desenvolvida e mantida pela **[OJSBR](https://ojsbr.com)**.
 
-**Licenças de terceiros:** `js/wordcloud2.js` é distribuído sob a licença MIT (veja o cabeçalho do
+**Licenças de terceiros:** `lib/wordcloud2/wordcloud2.js` é distribuído sob a licença MIT (veja o cabeçalho do
 arquivo). Todos os demais arquivos deste repositório são distribuídos sob a **GNU GPL v3**.
+
+### Uso de IA
+
+Foi usada IA generativa (Claude, da Anthropic) para escrever e rodar testes, melhorar o código e
+alinhá-lo aos padrões da PKP. Toda mudança é revisada e testada pela OJSBR, que responde pelas
+releases publicadas.
 
 ### Licença
 

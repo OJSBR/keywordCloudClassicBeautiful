@@ -5,92 +5,121 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Last-Translator: OJSBR\n"
 "Language-Team: OJSBR\n"
-"Language: fr_FR\n"
+"Language: fa\n"
 
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.displayName"
-msgstr "Nuage de mots-clés (classique)"
+msgstr "Keyword Cloud (Classic)"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.description"
-msgstr "Nuage dans la barre latérale avec les mots-clés publiés, dont la taille et la couleur suivent la fréquence de chacun, composé par une bibliothèque de mise en page fournie avec le plugin. Sans JavaScript, il devient une liste de liens."
+msgstr "Sidebar cloud of the published keywords, sized and coloured by how often each keyword is used, packed with a layout library shipped with the plugin. Without JavaScript it degrades to a list of links."
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.title"
-msgstr "Mots-clés"
+msgstr "کلیدواژه‌ها"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.uses"
-msgstr "article(s)"
+msgstr "مقاله"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.sampleNote"
-msgstr "Exemple illustratif — cette revue n’a pas encore de mots-clés publiés."
+msgstr "نمونهٔ نمایشی — این نشریه هنوز کلیدواژهٔ منتشرشده‌ای ندارد."
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.description"
-msgstr "Configurez l’apparence du nuage de mots-clés et le nombre de mots affichés."
+msgstr "ظاهر ابر کلیدواژه و تعداد کلیدواژه‌های نمایش‌داده‌شده را تنظیم کنید."
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.appearance"
-msgstr "Apparence"
+msgstr "ظاهر"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.content"
-msgstr "Contenu"
+msgstr "محتوا"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.size"
-msgstr "Taille du bloc"
+msgstr "اندازهٔ بلوک"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.size.small"
-msgstr "Petit"
+msgstr "کوچک"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.size.medium"
-msgstr "Moyen"
+msgstr "متوسط"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.size.large"
-msgstr "Grand"
+msgstr "بزرگ"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.rotation"
-msgstr "Rotation"
+msgstr "چرخش"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.rotation.horizontal"
-msgstr "Horizontal uniquement"
+msgstr "فقط افقی"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.rotation.orthogonal"
-msgstr "Horizontal et vertical"
+msgstr "افقی و عمودی"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.rotation.diagonal"
-msgstr "Variée (avec diagonales)"
+msgstr "متنوع (با مورب)"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.palette"
-msgstr "Palette de couleurs"
+msgstr "پالت رنگ"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.palette.soft"
-msgstr "Douce"
+msgstr "ملایم"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.palette.vibrant"
-msgstr "Vive"
+msgstr "پرمایه"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.palette.mono"
-msgstr "Monochrome (bleu)"
+msgstr "تک‌رنگ (آبی)"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.font"
-msgstr "Police"
+msgstr "قلم"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.font.serif"
-msgstr "Serif"
+msgstr "سریف"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.font.sans"
-msgstr "Sans serif"
+msgstr "بدون سریف"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.font.rounded"
-msgstr "Arrondie"
+msgstr "گِرد"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.numKeywords"
-msgstr "Nombre de mots-clés"
+msgstr "تعداد کلیدواژه‌ها"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.minFont"
-msgstr "Taille de police minimale (px)"
+msgstr "کوچک‌ترین اندازهٔ قلم (پیکسل)"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.maxFont"
-msgstr "Taille de police maximale (px)"
+msgstr "بزرگ‌ترین اندازهٔ قلم (پیکسل)"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.sampleWhenEmpty"
-msgstr "Afficher un nuage d’exemple lorsque la revue n’a pas encore de mots-clés"
+msgstr "وقتی نشریه هنوز کلیدواژه ندارد، ابر نمونه نشان داده شود"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.heightPx"
-msgstr "Hauteur du bloc en px (0 = automatique)"
+msgstr "ارتفاع بلوک بر حسب پیکسل (۰ = خودکار)"

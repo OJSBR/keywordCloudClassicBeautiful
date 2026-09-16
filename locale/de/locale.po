@@ -9,10 +9,10 @@ msgstr ""
 
 
 msgid "plugins.block.keywordCloudClassicBeautiful.displayName"
-msgstr "Schlagwortwolke (klassisch) — OJSBR"
+msgstr "Schlagwortwolke (klassisch)"
 
 msgid "plugins.block.keywordCloudClassicBeautiful.description"
-msgstr "Seitenleisten-Wolke der Artikel-Schlagwörter der Zeitschrift, in Größe und Farbe nach der Häufigkeit jedes Schlagworts — das klassische Verhalten, vollständig serverseitig gerendert, ohne externe JavaScript-Bibliothek. Von OJSBR."
+msgstr "Schlagwortwolke in der Seitenleiste mit den veröffentlichten Schlagwörtern; Größe und Farbe richten sich nach der Häufigkeit. Der Aufbau erfolgt mit einer im Plugin mitgelieferten Layout-Bibliothek. Ohne JavaScript bleibt eine Liste von Links."
 
 msgid "plugins.block.keywordCloudClassicBeautiful.title"
 msgstr "Schlagwörter"

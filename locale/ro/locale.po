@@ -5,92 +5,121 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Last-Translator: OJSBR\n"
 "Language-Team: OJSBR\n"
-"Language: pt\n"
+"Language: ro\n"
 
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.displayName"
-msgstr "Nuvem de Palavras-chave (Clássica) — OJSBR"
+msgstr "Keyword Cloud (Classic)"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.description"
-msgstr "Nuvem, na barra lateral, das palavras-chave dos artigos da revista, com tamanho e cor consoante a frequência de utilização de cada uma — o comportamento clássico, gerado inteiramente no servidor, sem biblioteca JavaScript externa. Desenvolvido pela OJSBR."
+msgstr "Sidebar cloud of the published keywords, sized and coloured by how often each keyword is used, packed with a layout library shipped with the plugin. Without JavaScript it degrades to a list of links."
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.title"
-msgstr "Palavras-chave"
+msgstr "Cuvinte-cheie"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.uses"
-msgstr "artigo(s)"
+msgstr "articol(e)"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.sampleNote"
-msgstr "Amostra ilustrativa — esta revista ainda não tem palavras-chave publicadas."
+msgstr "Exemplu ilustrativ — această revistă nu are încă cuvinte-cheie publicate."
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.description"
-msgstr "Configure o aspeto da nuvem de palavras-chave e quantas palavras mostra."
+msgstr "Configurați aspectul norului de cuvinte-cheie și câte cuvinte afișează."
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.appearance"
-msgstr "Aspeto"
+msgstr "Aspect"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.content"
-msgstr "Conteúdo"
+msgstr "Conținut"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.size"
-msgstr "Tamanho do bloco"
+msgstr "Dimensiunea blocului"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.size.small"
-msgstr "Pequeno"
+msgstr "Mic"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.size.medium"
-msgstr "Médio"
+msgstr "Mediu"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.size.large"
-msgstr "Grande"
+msgstr "Mare"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.rotation"
-msgstr "Rotação"
+msgstr "Rotație"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.rotation.horizontal"
-msgstr "Apenas horizontal"
+msgstr "Doar orizontal"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.rotation.orthogonal"
-msgstr "Horizontal e vertical"
+msgstr "Orizontal și vertical"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.rotation.diagonal"
-msgstr "Variada (com diagonais)"
+msgstr "Variat (cu diagonale)"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.palette"
-msgstr "Paleta de cores"
+msgstr "Paletă de culori"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.palette.soft"
-msgstr "Suave"
+msgstr "Blând"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.palette.vibrant"
-msgstr "Vibrante"
+msgstr "Viu"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.palette.mono"
-msgstr "Monocromática (azul)"
+msgstr "Monocrom (albastru)"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.font"
-msgstr "Tipo de letra"
+msgstr "Font"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.font.serif"
-msgstr "Com serifa"
+msgstr "Cu serife"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.font.sans"
-msgstr "Sem serifa"
+msgstr "Fără serife"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.font.rounded"
-msgstr "Arredondada"
+msgstr "Rotunjit"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.numKeywords"
-msgstr "Número de palavras-chave"
+msgstr "Numărul de cuvinte-cheie"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.minFont"
-msgstr "Menor tamanho de letra (px)"
+msgstr "Cea mai mică dimensiune a fontului (px)"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.maxFont"
-msgstr "Maior tamanho de letra (px)"
+msgstr "Cea mai mare dimensiune a fontului (px)"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.sampleWhenEmpty"
-msgstr "Mostrar uma nuvem de amostra quando a revista ainda não tem palavras-chave"
+msgstr "Afișează un nor de exemplu cât timp revista nu are cuvinte-cheie"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.heightPx"
-msgstr "Altura do bloco em px (0 = automática)"
+msgstr "Înălțimea blocului în px (0 = automat)"

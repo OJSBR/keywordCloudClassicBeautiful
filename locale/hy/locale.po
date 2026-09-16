@@ -5,92 +5,121 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Last-Translator: OJSBR\n"
 "Language-Team: OJSBR\n"
-"Language: fr_FR\n"
+"Language: hy\n"
 
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.displayName"
-msgstr "Nuage de mots-clés (classique)"
+msgstr "Keyword Cloud (Classic)"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.description"
-msgstr "Nuage dans la barre latérale avec les mots-clés publiés, dont la taille et la couleur suivent la fréquence de chacun, composé par une bibliothèque de mise en page fournie avec le plugin. Sans JavaScript, il devient une liste de liens."
+msgstr "Sidebar cloud of the published keywords, sized and coloured by how often each keyword is used, packed with a layout library shipped with the plugin. Without JavaScript it degrades to a list of links."
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.title"
-msgstr "Mots-clés"
+msgstr "Բանալի բառեր"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.uses"
-msgstr "article(s)"
+msgstr "հոդված(ներ)"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.sampleNote"
-msgstr "Exemple illustratif — cette revue n’a pas encore de mots-clés publiés."
+msgstr "Ցուցադրական օրինակ — այս ամսագիրը դեռ չունի հրապարակված բանալի բառեր։"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.description"
-msgstr "Configurez l’apparence du nuage de mots-clés et le nombre de mots affichés."
+msgstr "Կարգավորեք բանալի բառերի ամպի տեսքը և ցուցադրվող բառերի քանակը։"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.appearance"
-msgstr "Apparence"
+msgstr "Տեսք"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.content"
-msgstr "Contenu"
+msgstr "Բովանդակություն"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.size"
-msgstr "Taille du bloc"
+msgstr "Բլոկի չափը"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.size.small"
-msgstr "Petit"
+msgstr "Փոքր"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.size.medium"
-msgstr "Moyen"
+msgstr "Միջին"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.size.large"
-msgstr "Grand"
+msgstr "Մեծ"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.rotation"
-msgstr "Rotation"
+msgstr "Պտույտ"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.rotation.horizontal"
-msgstr "Horizontal uniquement"
+msgstr "Միայն հորիզոնական"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.rotation.orthogonal"
-msgstr "Horizontal et vertical"
+msgstr "Հորիզոնական և ուղղահայաց"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.rotation.diagonal"
-msgstr "Variée (avec diagonales)"
+msgstr "Բազմազան (անկյունագծերով)"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.palette"
-msgstr "Palette de couleurs"
+msgstr "Գունապնակ"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.palette.soft"
-msgstr "Douce"
+msgstr "Մեղմ"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.palette.vibrant"
-msgstr "Vive"
+msgstr "Վառ"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.palette.mono"
-msgstr "Monochrome (bleu)"
+msgstr "Միագույն (կապույտ)"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.font"
-msgstr "Police"
+msgstr "Տառատեսակ"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.font.serif"
-msgstr "Serif"
+msgstr "Սերիֆով"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.font.sans"
-msgstr "Sans serif"
+msgstr "Առանց սերիֆի"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.font.rounded"
-msgstr "Arrondie"
+msgstr "Կլորացված"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.numKeywords"
-msgstr "Nombre de mots-clés"
+msgstr "Բանալի բառերի քանակ"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.minFont"
-msgstr "Taille de police minimale (px)"
+msgstr "Ամենափոքր տառաչափը (px)"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.maxFont"
-msgstr "Taille de police maximale (px)"
+msgstr "Ամենամեծ տառաչափը (px)"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.sampleWhenEmpty"
-msgstr "Afficher un nuage d’exemple lorsque la revue n’a pas encore de mots-clés"
+msgstr "Ցուցադրել օրինակելի ամպ, երբ ամսագիրը դեռ բանալի բառեր չունի"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.heightPx"
-msgstr "Hauteur du bloc en px (0 = automatique)"
+msgstr "Բլոկի բարձրությունը px-ով (0 = ավտոմատ)"

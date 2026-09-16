@@ -5,92 +5,121 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Last-Translator: OJSBR\n"
 "Language-Team: OJSBR\n"
-"Language: fr_FR\n"
+"Language: pl\n"
 
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.displayName"
-msgstr "Nuage de mots-clés (classique)"
+msgstr "Keyword Cloud (Classic)"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.description"
-msgstr "Nuage dans la barre latérale avec les mots-clés publiés, dont la taille et la couleur suivent la fréquence de chacun, composé par une bibliothèque de mise en page fournie avec le plugin. Sans JavaScript, il devient une liste de liens."
+msgstr "Sidebar cloud of the published keywords, sized and coloured by how often each keyword is used, packed with a layout library shipped with the plugin. Without JavaScript it degrades to a list of links."
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.title"
-msgstr "Mots-clés"
+msgstr "Słowa kluczowe"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.uses"
-msgstr "article(s)"
+msgstr "artykuł(y)"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.sampleNote"
-msgstr "Exemple illustratif — cette revue n’a pas encore de mots-clés publiés."
+msgstr "Przykład poglądowy — to czasopismo nie ma jeszcze opublikowanych słów kluczowych."
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.description"
-msgstr "Configurez l’apparence du nuage de mots-clés et le nombre de mots affichés."
+msgstr "Skonfiguruj wygląd chmury słów kluczowych i liczbę wyświetlanych słów."
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.appearance"
-msgstr "Apparence"
+msgstr "Wygląd"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.content"
-msgstr "Contenu"
+msgstr "Treść"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.size"
-msgstr "Taille du bloc"
+msgstr "Rozmiar bloku"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.size.small"
-msgstr "Petit"
+msgstr "Mały"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.size.medium"
-msgstr "Moyen"
+msgstr "Średni"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.size.large"
-msgstr "Grand"
+msgstr "Duży"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.rotation"
-msgstr "Rotation"
+msgstr "Obrót"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.rotation.horizontal"
-msgstr "Horizontal uniquement"
+msgstr "Tylko poziomo"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.rotation.orthogonal"
-msgstr "Horizontal et vertical"
+msgstr "Poziomo i pionowo"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.rotation.diagonal"
-msgstr "Variée (avec diagonales)"
+msgstr "Zróżnicowany (z ukośnymi)"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.palette"
-msgstr "Palette de couleurs"
+msgstr "Paleta kolorów"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.palette.soft"
-msgstr "Douce"
+msgstr "Stonowane"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.palette.vibrant"
-msgstr "Vive"
+msgstr "Żywe"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.palette.mono"
-msgstr "Monochrome (bleu)"
+msgstr "Monochromatyczna (niebieska)"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.font"
-msgstr "Police"
+msgstr "Czcionka"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.font.serif"
-msgstr "Serif"
+msgstr "Szeryfowa"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.font.sans"
-msgstr "Sans serif"
+msgstr "Bezszeryfowa"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.font.rounded"
-msgstr "Arrondie"
+msgstr "Zaokrąglone"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.numKeywords"
-msgstr "Nombre de mots-clés"
+msgstr "Liczba słów kluczowych"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.minFont"
-msgstr "Taille de police minimale (px)"
+msgstr "Najmniejszy rozmiar czcionki (px)"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.maxFont"
-msgstr "Taille de police maximale (px)"
+msgstr "Największy rozmiar czcionki (px)"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.sampleWhenEmpty"
-msgstr "Afficher un nuage d’exemple lorsque la revue n’a pas encore de mots-clés"
+msgstr "Pokaż przykładową chmurę, dopóki czasopismo nie ma słów kluczowych"
 
+#, fuzzy
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.heightPx"
-msgstr "Hauteur du bloc en px (0 = automatique)"
+msgstr "Wysokość bloku w px (0 = automatycznie)"

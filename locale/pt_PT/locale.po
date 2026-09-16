@@ -5,92 +5,92 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Last-Translator: OJSBR\n"
 "Language-Team: OJSBR\n"
-"Language: fr_FR\n"
+"Language: pt_PT\n"
 
 
 msgid "plugins.block.keywordCloudClassicBeautiful.displayName"
-msgstr "Nuage de mots-clés (classique)"
+msgstr "Nuvem de Palavras-chave (Clássica)"
 
 msgid "plugins.block.keywordCloudClassicBeautiful.description"
-msgstr "Nuage dans la barre latérale avec les mots-clés publiés, dont la taille et la couleur suivent la fréquence de chacun, composé par une bibliothèque de mise en page fournie avec le plugin. Sans JavaScript, il devient une liste de liens."
+msgstr "Nuvem na barra lateral com as palavras-chave publicadas, com tamanho e cor conforme a frequência de cada uma, montada por uma biblioteca de layout distribuída com o plugin. Sem JavaScript, fica uma lista de ligações."
 
 msgid "plugins.block.keywordCloudClassicBeautiful.title"
-msgstr "Mots-clés"
+msgstr "Palavras-chave"
 
 msgid "plugins.block.keywordCloudClassicBeautiful.uses"
-msgstr "article(s)"
+msgstr "artigo(s)"
 
 msgid "plugins.block.keywordCloudClassicBeautiful.sampleNote"
-msgstr "Exemple illustratif — cette revue n’a pas encore de mots-clés publiés."
+msgstr "Amostra ilustrativa — esta revista ainda não tem palavras-chave publicadas."
 
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.description"
-msgstr "Configurez l’apparence du nuage de mots-clés et le nombre de mots affichés."
+msgstr "Configure o aspeto da nuvem de palavras-chave e quantas palavras mostra."
 
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.appearance"
-msgstr "Apparence"
+msgstr "Aspeto"
 
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.content"
-msgstr "Contenu"
+msgstr "Conteúdo"
 
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.size"
-msgstr "Taille du bloc"
+msgstr "Tamanho do bloco"
 
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.size.small"
-msgstr "Petit"
+msgstr "Pequeno"
 
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.size.medium"
-msgstr "Moyen"
+msgstr "Médio"
 
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.size.large"
-msgstr "Grand"
+msgstr "Grande"
 
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.rotation"
-msgstr "Rotation"
+msgstr "Rotação"
 
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.rotation.horizontal"
-msgstr "Horizontal uniquement"
+msgstr "Apenas horizontal"
 
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.rotation.orthogonal"
-msgstr "Horizontal et vertical"
+msgstr "Horizontal e vertical"
 
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.rotation.diagonal"
-msgstr "Variée (avec diagonales)"
+msgstr "Variada (com diagonais)"
 
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.palette"
-msgstr "Palette de couleurs"
+msgstr "Paleta de cores"
 
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.palette.soft"
-msgstr "Douce"
+msgstr "Suave"
 
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.palette.vibrant"
-msgstr "Vive"
+msgstr "Vibrante"
 
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.palette.mono"
-msgstr "Monochrome (bleu)"
+msgstr "Monocromática (azul)"
 
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.font"
-msgstr "Police"
+msgstr "Tipo de letra"
 
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.font.serif"
-msgstr "Serif"
+msgstr "Com serifa"
 
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.font.sans"
-msgstr "Sans serif"
+msgstr "Sem serifa"
 
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.font.rounded"
-msgstr "Arrondie"
+msgstr "Arredondada"
 
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.numKeywords"
-msgstr "Nombre de mots-clés"
+msgstr "Número de palavras-chave"
 
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.minFont"
-msgstr "Taille de police minimale (px)"
+msgstr "Menor tamanho de letra (px)"
 
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.maxFont"
-msgstr "Taille de police maximale (px)"
+msgstr "Maior tamanho de letra (px)"
 
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.sampleWhenEmpty"
-msgstr "Afficher un nuage d’exemple lorsque la revue n’a pas encore de mots-clés"
+msgstr "Mostrar uma nuvem de amostra quando a revista ainda não tem palavras-chave"
 
 msgid "plugins.block.keywordCloudClassicBeautiful.settings.heightPx"
-msgstr "Hauteur du bloc en px (0 = automatique)"
+msgstr "Altura do bloco em px (0 = automática)"

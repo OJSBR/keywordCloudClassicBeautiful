@@ -6,3 +6,5 @@ error_log           export-ignore
 /snapshot.png       export-ignore
 /snapshot.gif       export-ignore
 /snapshot.svg       export-ignore
+cypress export-ignore
+tests export-ignore
