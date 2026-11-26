@@ -1,10 +1,10 @@
 # Keyword Cloud (Classic · Beautiful) — OJS plugin
 
 [![OJS](https://img.shields.io/badge/OJS-3.4%20%7C%203.5-brightgreen)](https://pkp.sfu.ca/ojs/)
-[![Version](https://img.shields.io/badge/version-1.0.3.0-blue)](version.xml)
+[![Version](https://img.shields.io/badge/version-5.0.0.0-blue)](version.xml)
 [![License](https://img.shields.io/badge/license-GPL--3.0-lightgrey)](LICENSE)
 
-**⬇️ Install package:** [OJS / OMP 3.5](https://github.com/OJSBR/keywordCloudClassicBeautiful/releases/download/1.0.3.0/keywordCloudClassicBeautiful-1.0.3.0.tar.gz) · [OJS 3.4](https://github.com/OJSBR/keywordCloudClassicBeautiful/releases/download/1.0.3.0-ojs3.4/keywordCloudClassicBeautiful-1.0.3.0-ojs3.4.tar.gz) — or browse all [Releases](../../releases).
+**⬇️ Install package:** [OJS / OMP 3.5](https://github.com/OJSBR/keywordCloudClassicBeautiful/releases/download/5.0.0.0/keywordCloudClassicBeautiful-5.0.0.0.tar.gz) · [OJS 3.4](https://github.com/OJSBR/keywordCloudClassicBeautiful/releases/download/4.0.0.0/keywordCloudClassicBeautiful-4.0.0.0.tar.gz) — or browse all [Releases](../../releases).
 
 A **block plugin** for **Open Journal Systems (OJS)** that renders a **real, packed keyword
 cloud** in the sidebar — where each keyword is **sized and coloured by how often it is used**
@@ -28,8 +28,8 @@ bundled library — no external CDN**, so it can never break from a remote libra
 
 | Application | Branch | Plugin release |
 |-------------|--------|----------------|
-| OJS 3.5.x and OMP 3.5.x | [`stable-3_5_0`](../../tree/stable-3_5_0) *(default)* | 1.0.3.0 |
-| OJS 3.4.x | [`stable-3_4_0`](../../tree/stable-3_4_0) | 1.0.3.0-ojs3.4 |
+| OJS 3.5.x and OMP 3.5.x | [`stable-3_5_0`](../../tree/stable-3_5_0) *(default)* | 5.0.0.0 |
+| OJS 3.4.x | [`stable-3_4_0`](../../tree/stable-3_4_0) | 4.0.0.0 |
 
 > Since 1.0.3.0 the OJS and the OMP editions are the same code, in this repository. The former
 > `keywordCloudClassicBeautifulOmp` repository is archived; its releases stay available there.
@@ -171,8 +171,8 @@ remota.
 
 | Aplicação | Branch | Release |
 |-----------|--------|---------|
-| OJS 3.5.x e OMP 3.5.x | [`stable-3_5_0`](../../tree/stable-3_5_0) *(padrão)* | 1.0.3.0 |
-| OJS 3.4.x | [`stable-3_4_0`](../../tree/stable-3_4_0) | 1.0.3.0-ojs3.4 |
+| OJS 3.5.x e OMP 3.5.x | [`stable-3_5_0`](../../tree/stable-3_5_0) *(padrão)* | 5.0.0.0 |
+| OJS 3.4.x | [`stable-3_4_0`](../../tree/stable-3_4_0) | 4.0.0.0 |
 
 > A partir da 1.0.3.0 as edições OJS e OMP são o mesmo código, neste repositório. O antigo
 > `keywordCloudClassicBeautifulOmp` está arquivado; as releases dele continuam disponíveis lá.
